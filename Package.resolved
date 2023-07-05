@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift_huge-numbers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RandomHashTags/swift_huge-numbers.git",
+      "state" : {
+        "revision" : "4d78511f595bed62f9904ced59c5799250a982aa",
+        "version" : "1.0.14"
+      }
+    }
+  ],
+  "version" : 2
+}
