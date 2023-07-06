@@ -1,12 +1,21 @@
 # swift-units
 Unit conversion Swift library, with other relevant information. Built on top of [HugeNumbers](https://github.com/RandomHashTags/swift_huge-numbers).
 
-## Requirements
+## Installation
+### Requirements
 - Swift >= 5.1
 - macOS >= 10.15
 - iOS >= 13.0
 - tvOS >= 13.0
 - watchOS >= 6.0
+### CocoaPods
+```ruby
+pod 'SwiftUnits', '~> 1.0.0'
+```
+### Swift Package Manager
+```swift
+.package(url: "https://github.com/RandomHashTags/swift-units.git", from: "1.0.0")
+```
 
 ## Current features
 ### Units
