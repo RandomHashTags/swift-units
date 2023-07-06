@@ -1,5 +1,5 @@
 # swift-units
-Unit conversion Swift library, with other relevant information.
+Unit conversion Swift library, with other relevant information. Built on top of [HugeNumbers](https://github.com/RandomHashTags/swift_huge-numbers).
 
 ## Requirements
 - Swift >= 5.1
