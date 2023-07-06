@@ -12,6 +12,10 @@ Unit conversion Swift library, with other relevant information. Built on top of 
 ```ruby
 pod 'SwiftUnits', '~> 1.0.0'
 ```
+or for latest version (may not be uploaded to CocoaPods yet)
+```ruby
+pod 'SwiftUnits', :git => 'https://github.com/RandomHashTags/swift-units.git'
+```
 ### Swift Package Manager
 ```swift
 .package(url: "https://github.com/RandomHashTags/swift-units.git", from: "1.0.0")
