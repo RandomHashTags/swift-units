@@ -20,9 +20,13 @@ public enum UnitPrefix : Int {
     case nano = -9
     case micro = -6
     case milli = -3
+    case centi = -2
+    case deci = -1
     
     case normal = 0
     
+    case deca = 1
+    case hecto = 2
     case kilo = 3
     case mega = 6
     case giga = 9
@@ -46,9 +50,13 @@ public enum UnitPrefix : Int {
         case .nano: return "n"
         case .micro: return "μ"
         case .milli: return "m"
+        case .centi: return "c"
+        case .deci: return "d"
             
         case .normal: return ""
             
+        case .deca: return "da"
+        case .hecto: return "h"
         case .kilo: return "k"
         case .mega: return "M"
         case .giga: return "G"

@@ -27,21 +27,21 @@ public struct PressureUnit : Unit {
         case .pascal:
             switch unit {
             case .pascal: return value
-            case .pound_per_square_inch: return value * HugeFloat("0.000145037737730")
-            case .standard_atmosphere: return value * HugeFloat("0.00000986923")
+            case .pound_per_square_inch: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "1290320000", divisor: "8896443230521"))
+            case .standard_atmosphere: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "1", divisor: "101325"))
             }
             
         case .pound_per_square_inch:
             switch unit {
-            case .pascal: return value * HugeFloat("6894.757293168")
+            case .pascal: return value * HugeFloat(integer: HugeInt("6894"), remainder: HugeRemainder(dividend: "977150521", divisor: "1290320000"))
             case .pound_per_square_inch: return value
-            case .standard_atmosphere: return value * HugeFloat("0.068045963779916")
+            case .standard_atmosphere: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "1270920461503", divisor: "18677382000000"))
             }
             
         case .standard_atmosphere:
             switch unit {
             case .pascal: return value * HugeFloat("101325")
-            case .pound_per_square_inch: return value * HugeFloat("14.6959487755142")
+            case .pound_per_square_inch: return value * HugeFloat(integer: HugeInt("14"), remainder: HugeRemainder(dividend: "884495538958", divisor: "1270920461503"))
             case .standard_atmosphere: return value
             }
         }

@@ -36,18 +36,18 @@ public struct MassUnit : Unit {
             switch unit {
             case .dalton: return value * HugeFloat("602217364335483200000000")
             case .gram: return value
-            case .ounce: return value * HugeFloat("0.03527396195")
-            case .pound: return value * HugeFloat("0.00220462262185")
+            case .ounce: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "1600000", divisor: "45359237"))
+            case .pound: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "100000", divisor: "45359237"))
             case .tonne: return value.multiply_decimal_by_ten(-6)
             }
             
         case .ounce:
             switch unit {
             case .dalton: return value * HugeFloat("17072575081449896000000000")
-            case .gram: return value * HugeFloat("28.34952")
+            case .gram: return value * HugeFloat(integer: "28", remainder: HugeRemainder(dividend: "559237", divisor: "1600000"))
             case .ounce: return value
             case .pound: return value * HugeFloat("0.0625")
-            case .tonne: return value * HugeFloat("0.00002834952")
+            case .tonne: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "45359237", divisor: "1600000000000"))
             }
             
         case .pound:
@@ -63,8 +63,8 @@ public struct MassUnit : Unit {
             switch unit {
             case .dalton: return value * HugeFloat("602217364335483200000000000000")
             case .gram: return value.multiply_decimal_by_ten(6)
-            case .ounce: return value * HugeFloat("35273.96194958")
-            case .pound: return value * HugeFloat("2204.62262185")
+            case .ounce: return value * HugeFloat(integer: HugeInt("35273"), remainder: HugeRemainder(dividend: "43633299", divisor: "45359237"))
+            case .pound: return value * HugeFloat(integer: HugeInt("2204"), remainder: HugeRemainder(dividend: "28241652", divisor: "45359237"))
             case .tonne: return value
             }
         }
