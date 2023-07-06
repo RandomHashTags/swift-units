@@ -3,8 +3,10 @@ Unit conversion Swift library, with other relevant information. Built on top of 
 
 ## Requirements
 - Swift >= 5.1
-- MacOS >= 10.15
+- macOS >= 10.15
 - iOS >= 13.0
+- tvOS >= 13.0
+- watchOS >= 6.0
 
 ## Current features
 ### Units
