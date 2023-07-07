@@ -3,7 +3,7 @@ Unit conversion Swift library, with other relevant information. Built on top of 
 
 ## Installation
 ### Requirements
-- Swift >= 5.1
+- Swift >= 5.3
 - macOS >= 10.15
 - iOS >= 13.0
 - tvOS >= 13.0

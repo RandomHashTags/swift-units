@@ -1,10 +1,11 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "swift-units",
+    defaultLocalization: "en",
     platforms: [
         .macOS(.v10_15),
         .iOS(.v13),
@@ -18,7 +19,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/RandomHashTags/swift_huge-numbers.git", from: "1.0.14")
+        .package(url: "https://github.com/RandomHashTags/swift_huge-numbers.git", from: "1.0.15")
     ],
     targets: [
         .target(

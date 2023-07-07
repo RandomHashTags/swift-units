@@ -7,8 +7,13 @@
 import Foundation
 
 /// An enum that contains all the unit types of a certain value. The unit types should be organized in decending order by order of magnitude. (Every case is greater than the case above it)
-public protocol UnitType : Identifiable, CaseIterable, Equatable, RawRepresentable where RawValue == String, ID == String {
+public protocol UnitType : Identifiable, CaseIterable, Hashable, RawRepresentable where RawValue == String, ID == String {
     var symbol : String { get }
+    
+    // TODO: support
+    /*
+    /// Gets the localized name of this unit type, respecting singular and plural localization.
+    func name(_ quantity: Int) -> String*/
 }
 public extension UnitType {
     var id : String {
