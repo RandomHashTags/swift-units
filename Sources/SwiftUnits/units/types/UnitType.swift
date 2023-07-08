@@ -81,893 +81,666 @@ public extension UnitType {
 }
 
 extension UnitType {
+    private func locale_name(_ key: String.LocalizationValue) -> String {
+        return String(localized: key, table: "Units", bundle: Bundle.module)
+    }
     func get_name(_ quantity: HugeInt) -> String {
-        let key:String.LocalizationValue
         switch Self.category {
         case .acceleration:
             switch self as! AccelerationUnitType {
             case .metres_per_second_per_second:
-                key = String.LocalizationValue("acceleration_metres_per_second_per_second \(quantity)")
-                break
+                return locale_name("acceleration_metres_per_second_per_second \(quantity)")
             }
         case .action:
             switch self as! ActionUnitType {
             case .joule_second:
-                key = String.LocalizationValue("action_joule_second \(quantity)")
-                break
+                return locale_name("action_joule_second \(quantity)")
             }
         case .density:
             switch self as! DensityUnitType {
             case .kilogram_per_cubic_metre:
-                key = String.LocalizationValue("density_kilogram_per_cubic_metre \(quantity)")
-                break
+                return locale_name("density_kilogram_per_cubic_metre \(quantity)")
             case .gram_per_cubic_centimetre:
-                key = String.LocalizationValue("density_gram_per_cubic_centimetre \(quantity)")
-                break
+                return locale_name("density_gram_per_cubic_centimetre \(quantity)")
             }
         case .electric_charge:
             switch self as! ElectricChargeUnitType {
             case .coulomb:
-                key = String.LocalizationValue("electric_charge_coulomb \(quantity)")
-                break
+                return locale_name("electric_charge_coulomb \(quantity)")
             }
         case .energy:
             switch self as! EnergyUnitType {
             case .electronvolt:
-                key = String.LocalizationValue("energy_electronvolt \(quantity)")
-                break
+                return locale_name("energy_electronvolt \(quantity)")
             case .joule:
-                key = String.LocalizationValue("energy_joule \(quantity)")
-                break
+                return locale_name("energy_joule \(quantity)")
             }
         case .force:
             switch self as! ForceUnitType {
             case .newton:
-                key = String.LocalizationValue("force_newton \(quantity)")
-                break
+                return locale_name("force_newton \(quantity)")
             }
         case .frequency:
             switch self as! FrequencyUnitType {
             case .wavelength_in_metres:
-                key = String.LocalizationValue("frequency_wavelength_in_metres \(quantity)")
-                break
+                return locale_name("frequency_wavelength_in_metres \(quantity)")
             case .hertz:
-                key = String.LocalizationValue("frequency_hertz \(quantity)")
-                break
+                return locale_name("frequency_hertz \(quantity)")
             }
         case .length:
             switch self as! LengthUnitType {
             case .metre:
-                key = String.LocalizationValue("length_metre \(quantity)")
-                break
+                return locale_name("length_metre \(quantity)")
             case .nautical_mile:
-                key = String.LocalizationValue("length_nautical_mile \(quantity)")
-                break
+                return locale_name("length_nautical_mile \(quantity)")
             case .mile:
-                key = String.LocalizationValue("length_mile \(quantity)")
-                break
+                return locale_name("length_mile \(quantity)")
             case .furlong:
-                key = String.LocalizationValue("length_furlong \(quantity)")
-                break
+                return locale_name("length_furlong \(quantity)")
             case .yard:
-                key = String.LocalizationValue("length_yard \(quantity)")
-                break
+                return locale_name("length_yard \(quantity)")
             case .foot:
-                key = String.LocalizationValue("length_foot \(quantity)")
-                break
+                return locale_name("length_foot \(quantity)")
             case .inch:
-                key = String.LocalizationValue("length_inch \(quantity)")
-                break
+                return locale_name("length_inch \(quantity)")
             }
         case .mass:
             switch self as! MassUnitType {
             case .dalton:
-                key = String.LocalizationValue("mass_dalton \(quantity)")
-                break
+                return locale_name("mass_dalton \(quantity)")
             case .gram:
-                key = String.LocalizationValue("mass_gram \(quantity)")
-                break
+                return locale_name("mass_gram \(quantity)")
             case .ounce:
-                key = String.LocalizationValue("mass_ounce \(quantity)")
-                break
+                return locale_name("mass_ounce \(quantity)")
             case .pound:
-                key = String.LocalizationValue("mass_pound \(quantity)")
-                break
+                return locale_name("mass_pound \(quantity)")
             case .tonne:
-                key = String.LocalizationValue("mass_tonne \(quantity)")
-                break
+                return locale_name("mass_tonne \(quantity)")
             }
         case .pressure:
             switch self as! PressureUnitType {
             case .pascal:
-                key = String.LocalizationValue("pressure_pascal \(quantity)")
-                break
+                return locale_name("pressure_pascal \(quantity)")
             case .pound_per_square_inch:
-                key = String.LocalizationValue("pressure_pound_per_square_inch \(quantity)")
-                break
+                return locale_name("pressure_pound_per_square_inch \(quantity)")
             case .standard_atmosphere:
-                key = String.LocalizationValue("pressure_standard_atmosphere \(quantity)")
-                break
+                return locale_name("pressure_standard_atmosphere \(quantity)")
             }
         case .speed:
             switch self as! SpeedUnitType {
             case .metre_per_second:
-                key = String.LocalizationValue("speed_metre_per_second \(quantity)")
-                break
+                return locale_name("speed_metre_per_second \(quantity)")
             case .kilometre_per_hour:
-                key = String.LocalizationValue("speed_kilometre_per_hour \(quantity)")
-                break
+                return locale_name("speed_kilometre_per_hour \(quantity)")
             case .mile_per_hour:
-                key = String.LocalizationValue("speed_mile_per_hour \(quantity)")
-                break
+                return locale_name("speed_mile_per_hour \(quantity)")
             case .knot:
-                key = String.LocalizationValue("speed_knot \(quantity)")
-                break
+                return locale_name("speed_knot \(quantity)")
             case .foot_per_second:
-                key = String.LocalizationValue("speed_foot_per_second \(quantity)")
-                break
+                return locale_name("speed_foot_per_second \(quantity)")
             }
         case .temperature:
             switch self as! TemperatureUnitType {
             case .fahrenheit:
-                key = String.LocalizationValue("temperature_fahrenheit \(quantity)")
-                break
+                return locale_name("temperature_fahrenheit \(quantity)")
             case .celsius:
-                key = String.LocalizationValue("temperature_celsius \(quantity)")
-                break
+                return locale_name("temperature_celsius \(quantity)")
             case .kelvin:
-                key = String.LocalizationValue("temperature_kelvin \(quantity)")
-                break
+                return locale_name("temperature_kelvin \(quantity)")
             case .rankine:
-                key = String.LocalizationValue("temperature_rankine \(quantity)")
-                break
+                return locale_name("temperature_rankine \(quantity)")
             }
         case .time:
             switch self as! TimeUnitType {
             case .second:
-                key = String.LocalizationValue("time_second \(quantity)")
-                break
+                return locale_name("time_second \(quantity)")
             case .minute:
-                key = String.LocalizationValue("time_minute \(quantity)")
-                break
+                return locale_name("time_minute \(quantity)")
             case .hour:
-                key = String.LocalizationValue("time_hour \(quantity)")
-                break
+                return locale_name("time_hour \(quantity)")
             case .day:
-                key = String.LocalizationValue("time_day \(quantity)")
-                break
+                return locale_name("time_day \(quantity)")
             case .week:
-                key = String.LocalizationValue("time_week \(quantity)")
-                break
+                return locale_name("time_week \(quantity)")
             case .month:
-                key = String.LocalizationValue("time_month \(quantity)")
-                break
+                return locale_name("time_month \(quantity)")
             case .year:
-                key = String.LocalizationValue("time_year \(quantity)")
-                break
+                return locale_name("time_year \(quantity)")
             case .decade:
-                key = String.LocalizationValue("time_decade \(quantity)")
-                break
+                return locale_name("time_decade \(quantity)")
             case .century:
-                key = String.LocalizationValue("time_century \(quantity)")
-                break
+                return locale_name("time_century \(quantity)")
             case .millennium:
-                key = String.LocalizationValue("time_millennium \(quantity)")
-                break
+                return locale_name("time_millennium \(quantity)")
             }
         }
-        return String(localized: key, table: "Units", bundle: Bundle.module)
     }
     
     func get_name(_ quantity: HugeFloat) -> String {
-        let key:String.LocalizationValue
         switch Self.category {
         case .acceleration:
             switch self as! AccelerationUnitType {
             case .metres_per_second_per_second:
-                key = String.LocalizationValue("acceleration_metres_per_second_per_second \(quantity)")
-                break
+                return locale_name("acceleration_metres_per_second_per_second \(quantity)")
             }
         case .action:
             switch self as! ActionUnitType {
             case .joule_second:
-                key = String.LocalizationValue("action_joule_second \(quantity)")
-                break
+                return locale_name("action_joule_second \(quantity)")
             }
         case .density:
             switch self as! DensityUnitType {
             case .kilogram_per_cubic_metre:
-                key = String.LocalizationValue("density_kilogram_per_cubic_metre \(quantity)")
-                break
+                return locale_name("density_kilogram_per_cubic_metre \(quantity)")
             case .gram_per_cubic_centimetre:
-                key = String.LocalizationValue("density_gram_per_cubic_centimetre \(quantity)")
-                break
+                return locale_name("density_gram_per_cubic_centimetre \(quantity)")
             }
         case .electric_charge:
             switch self as! ElectricChargeUnitType {
             case .coulomb:
-                key = String.LocalizationValue("electric_charge_coulomb \(quantity)")
-                break
+                return locale_name("electric_charge_coulomb \(quantity)")
             }
         case .energy:
             switch self as! EnergyUnitType {
             case .electronvolt:
-                key = String.LocalizationValue("energy_electronvolt \(quantity)")
-                break
+                return locale_name("energy_electronvolt \(quantity)")
             case .joule:
-                key = String.LocalizationValue("energy_joule \(quantity)")
-                break
+                return locale_name("energy_joule \(quantity)")
             }
         case .force:
             switch self as! ForceUnitType {
             case .newton:
-                key = String.LocalizationValue("force_newton \(quantity)")
-                break
+                return locale_name("force_newton \(quantity)")
             }
         case .frequency:
             switch self as! FrequencyUnitType {
             case .wavelength_in_metres:
-                key = String.LocalizationValue("frequency_wavelength_in_metres \(quantity)")
-                break
+                return locale_name("frequency_wavelength_in_metres \(quantity)")
             case .hertz:
-                key = String.LocalizationValue("frequency_hertz \(quantity)")
-                break
+                return locale_name("frequency_hertz \(quantity)")
             }
         case .length:
             switch self as! LengthUnitType {
             case .metre:
-                key = String.LocalizationValue("length_metre \(quantity)")
-                break
+                return locale_name("length_metre \(quantity)")
             case .nautical_mile:
-                key = String.LocalizationValue("length_nautical_mile \(quantity)")
-                break
+                return locale_name("length_nautical_mile \(quantity)")
             case .mile:
-                key = String.LocalizationValue("length_mile \(quantity)")
-                break
+                return locale_name("length_mile \(quantity)")
             case .furlong:
-                key = String.LocalizationValue("length_furlong \(quantity)")
-                break
+                return locale_name("length_furlong \(quantity)")
             case .yard:
-                key = String.LocalizationValue("length_yard \(quantity)")
-                break
+                return locale_name("length_yard \(quantity)")
             case .foot:
-                key = String.LocalizationValue("length_foot \(quantity)")
-                break
+                return locale_name("length_foot \(quantity)")
             case .inch:
-                key = String.LocalizationValue("length_inch \(quantity)")
-                break
+                return locale_name("length_inch \(quantity)")
             }
         case .mass:
             switch self as! MassUnitType {
             case .dalton:
-                key = String.LocalizationValue("mass_dalton \(quantity)")
-                break
+                return locale_name("mass_dalton \(quantity)")
             case .gram:
-                key = String.LocalizationValue("mass_gram \(quantity)")
-                break
+                return locale_name("mass_gram \(quantity)")
             case .ounce:
-                key = String.LocalizationValue("mass_ounce \(quantity)")
-                break
+                return locale_name("mass_ounce \(quantity)")
             case .pound:
-                key = String.LocalizationValue("mass_pound \(quantity)")
-                break
+                return locale_name("mass_pound \(quantity)")
             case .tonne:
-                key = String.LocalizationValue("mass_tonne \(quantity)")
-                break
+                return locale_name("mass_tonne \(quantity)")
             }
         case .pressure:
             switch self as! PressureUnitType {
             case .pascal:
-                key = String.LocalizationValue("pressure_pascal \(quantity)")
-                break
+                return locale_name("pressure_pascal \(quantity)")
             case .pound_per_square_inch:
-                key = String.LocalizationValue("pressure_pound_per_square_inch \(quantity)")
-                break
+                return locale_name("pressure_pound_per_square_inch \(quantity)")
             case .standard_atmosphere:
-                key = String.LocalizationValue("pressure_standard_atmosphere \(quantity)")
-                break
+                return locale_name("pressure_standard_atmosphere \(quantity)")
             }
         case .speed:
             switch self as! SpeedUnitType {
             case .metre_per_second:
-                key = String.LocalizationValue("speed_metre_per_second \(quantity)")
-                break
+                return locale_name("speed_metre_per_second \(quantity)")
             case .kilometre_per_hour:
-                key = String.LocalizationValue("speed_kilometre_per_hour \(quantity)")
-                break
+                return locale_name("speed_kilometre_per_hour \(quantity)")
             case .mile_per_hour:
-                key = String.LocalizationValue("speed_mile_per_hour \(quantity)")
-                break
+                return locale_name("speed_mile_per_hour \(quantity)")
             case .knot:
-                key = String.LocalizationValue("speed_knot \(quantity)")
-                break
+                return locale_name("speed_knot \(quantity)")
             case .foot_per_second:
-                key = String.LocalizationValue("speed_foot_per_second \(quantity)")
-                break
+                return locale_name("speed_foot_per_second \(quantity)")
             }
         case .temperature:
             switch self as! TemperatureUnitType {
             case .fahrenheit:
-                key = String.LocalizationValue("temperature_fahrenheit \(quantity)")
-                break
+                return locale_name("temperature_fahrenheit \(quantity)")
             case .celsius:
-                key = String.LocalizationValue("temperature_celsius \(quantity)")
-                break
+                return locale_name("temperature_celsius \(quantity)")
             case .kelvin:
-                key = String.LocalizationValue("temperature_kelvin \(quantity)")
-                break
+                return locale_name("temperature_kelvin \(quantity)")
             case .rankine:
-                key = String.LocalizationValue("temperature_rankine \(quantity)")
-                break
+                return locale_name("temperature_rankine \(quantity)")
             }
         case .time:
             switch self as! TimeUnitType {
             case .second:
-                key = String.LocalizationValue("time_second \(quantity)")
-                break
+                return locale_name("time_second \(quantity)")
             case .minute:
-                key = String.LocalizationValue("time_minute \(quantity)")
-                break
+                return locale_name("time_minute \(quantity)")
             case .hour:
-                key = String.LocalizationValue("time_hour \(quantity)")
-                break
+                return locale_name("time_hour \(quantity)")
             case .day:
-                key = String.LocalizationValue("time_day \(quantity)")
-                break
+                return locale_name("time_day \(quantity)")
             case .week:
-                key = String.LocalizationValue("time_week \(quantity)")
-                break
+                return locale_name("time_week \(quantity)")
             case .month:
-                key = String.LocalizationValue("time_month \(quantity)")
-                break
+                return locale_name("time_month \(quantity)")
             case .year:
-                key = String.LocalizationValue("time_year \(quantity)")
-                break
+                return locale_name("time_year \(quantity)")
             case .decade:
-                key = String.LocalizationValue("time_decade \(quantity)")
-                break
+                return locale_name("time_decade \(quantity)")
             case .century:
-                key = String.LocalizationValue("time_century \(quantity)")
-                break
+                return locale_name("time_century \(quantity)")
             case .millennium:
-                key = String.LocalizationValue("time_millennium \(quantity)")
-                break
+                return locale_name("time_millennium \(quantity)")
             }
         }
-        return String(localized: key, table: "Units", bundle: Bundle.module)
     }
     
     func get_name(_ quantity: Int) -> String {
-        let key:String.LocalizationValue
         switch Self.category {
         case .acceleration:
             switch self as! AccelerationUnitType {
             case .metres_per_second_per_second:
-                key = String.LocalizationValue("acceleration_metres_per_second_per_second \(quantity)")
-                break
+                return locale_name("acceleration_metres_per_second_per_second \(quantity)")
             }
         case .action:
             switch self as! ActionUnitType {
             case .joule_second:
-                key = String.LocalizationValue("action_joule_second \(quantity)")
-                break
+                return locale_name("action_joule_second \(quantity)")
             }
         case .density:
             switch self as! DensityUnitType {
             case .kilogram_per_cubic_metre:
-                key = String.LocalizationValue("density_kilogram_per_cubic_metre \(quantity)")
-                break
+                return locale_name("density_kilogram_per_cubic_metre \(quantity)")
             case .gram_per_cubic_centimetre:
-                key = String.LocalizationValue("density_gram_per_cubic_centimetre \(quantity)")
-                break
+                return locale_name("density_gram_per_cubic_centimetre \(quantity)")
             }
         case .electric_charge:
             switch self as! ElectricChargeUnitType {
             case .coulomb:
-                key = String.LocalizationValue("electric_charge_coulomb \(quantity)")
-                break
+                return locale_name("electric_charge_coulomb \(quantity)")
             }
         case .energy:
             switch self as! EnergyUnitType {
             case .electronvolt:
-                key = String.LocalizationValue("energy_electronvolt \(quantity)")
-                break
+                return locale_name("energy_electronvolt \(quantity)")
             case .joule:
-                key = String.LocalizationValue("energy_joule \(quantity)")
-                break
+                return locale_name("energy_joule \(quantity)")
             }
         case .force:
             switch self as! ForceUnitType {
             case .newton:
-                key = String.LocalizationValue("force_newton \(quantity)")
-                break
+                return locale_name("force_newton \(quantity)")
             }
         case .frequency:
             switch self as! FrequencyUnitType {
             case .wavelength_in_metres:
-                key = String.LocalizationValue("frequency_wavelength_in_metres \(quantity)")
-                break
+                return locale_name("frequency_wavelength_in_metres \(quantity)")
             case .hertz:
-                key = String.LocalizationValue("frequency_hertz \(quantity)")
-                break
+                return locale_name("frequency_hertz \(quantity)")
             }
         case .length:
             switch self as! LengthUnitType {
             case .metre:
-                key = String.LocalizationValue("length_metre \(quantity)")
-                break
+                return locale_name("length_metre \(quantity)")
             case .nautical_mile:
-                key = String.LocalizationValue("length_nautical_mile \(quantity)")
-                break
+                return locale_name("length_nautical_mile \(quantity)")
             case .mile:
-                key = String.LocalizationValue("length_mile \(quantity)")
-                break
+                return locale_name("length_mile \(quantity)")
             case .furlong:
-                key = String.LocalizationValue("length_furlong \(quantity)")
-                break
+                return locale_name("length_furlong \(quantity)")
             case .yard:
-                key = String.LocalizationValue("length_yard \(quantity)")
-                break
+                return locale_name("length_yard \(quantity)")
             case .foot:
-                key = String.LocalizationValue("length_foot \(quantity)")
-                break
+                return locale_name("length_foot \(quantity)")
             case .inch:
-                key = String.LocalizationValue("length_inch \(quantity)")
-                break
+                return locale_name("length_inch \(quantity)")
             }
         case .mass:
             switch self as! MassUnitType {
             case .dalton:
-                key = String.LocalizationValue("mass_dalton \(quantity)")
-                break
+                return locale_name("mass_dalton \(quantity)")
             case .gram:
-                key = String.LocalizationValue("mass_gram \(quantity)")
-                break
+                return locale_name("mass_gram \(quantity)")
             case .ounce:
-                key = String.LocalizationValue("mass_ounce \(quantity)")
-                break
+                return locale_name("mass_ounce \(quantity)")
             case .pound:
-                key = String.LocalizationValue("mass_pound \(quantity)")
-                break
+                return locale_name("mass_pound \(quantity)")
             case .tonne:
-                key = String.LocalizationValue("mass_tonne \(quantity)")
-                break
+                return locale_name("mass_tonne \(quantity)")
             }
         case .pressure:
             switch self as! PressureUnitType {
             case .pascal:
-                key = String.LocalizationValue("pressure_pascal \(quantity)")
-                break
+                return locale_name("pressure_pascal \(quantity)")
             case .pound_per_square_inch:
-                key = String.LocalizationValue("pressure_pound_per_square_inch \(quantity)")
-                break
+                return locale_name("pressure_pound_per_square_inch \(quantity)")
             case .standard_atmosphere:
-                key = String.LocalizationValue("pressure_standard_atmosphere \(quantity)")
-                break
+                return locale_name("pressure_standard_atmosphere \(quantity)")
             }
         case .speed:
             switch self as! SpeedUnitType {
             case .metre_per_second:
-                key = String.LocalizationValue("speed_metre_per_second \(quantity)")
-                break
+                return locale_name("speed_metre_per_second \(quantity)")
             case .kilometre_per_hour:
-                key = String.LocalizationValue("speed_kilometre_per_hour \(quantity)")
-                break
+                return locale_name("speed_kilometre_per_hour \(quantity)")
             case .mile_per_hour:
-                key = String.LocalizationValue("speed_mile_per_hour \(quantity)")
-                break
+                return locale_name("speed_mile_per_hour \(quantity)")
             case .knot:
-                key = String.LocalizationValue("speed_knot \(quantity)")
-                break
+                return locale_name("speed_knot \(quantity)")
             case .foot_per_second:
-                key = String.LocalizationValue("speed_foot_per_second \(quantity)")
-                break
+                return locale_name("speed_foot_per_second \(quantity)")
             }
         case .temperature:
             switch self as! TemperatureUnitType {
             case .fahrenheit:
-                key = String.LocalizationValue("temperature_fahrenheit \(quantity)")
-                break
+                return locale_name("temperature_fahrenheit \(quantity)")
             case .celsius:
-                key = String.LocalizationValue("temperature_celsius \(quantity)")
-                break
+                return locale_name("temperature_celsius \(quantity)")
             case .kelvin:
-                key = String.LocalizationValue("temperature_kelvin \(quantity)")
-                break
+                return locale_name("temperature_kelvin \(quantity)")
             case .rankine:
-                key = String.LocalizationValue("temperature_rankine \(quantity)")
-                break
+                return locale_name("temperature_rankine \(quantity)")
             }
         case .time:
             switch self as! TimeUnitType {
             case .second:
-                key = String.LocalizationValue("time_second \(quantity)")
-                break
+                return locale_name("time_second \(quantity)")
             case .minute:
-                key = String.LocalizationValue("time_minute \(quantity)")
-                break
+                return locale_name("time_minute \(quantity)")
             case .hour:
-                key = String.LocalizationValue("time_hour \(quantity)")
-                break
+                return locale_name("time_hour \(quantity)")
             case .day:
-                key = String.LocalizationValue("time_day \(quantity)")
-                break
+                return locale_name("time_day \(quantity)")
             case .week:
-                key = String.LocalizationValue("time_week \(quantity)")
-                break
+                return locale_name("time_week \(quantity)")
             case .month:
-                key = String.LocalizationValue("time_month \(quantity)")
-                break
+                return locale_name("time_month \(quantity)")
             case .year:
-                key = String.LocalizationValue("time_year \(quantity)")
-                break
+                return locale_name("time_year \(quantity)")
             case .decade:
-                key = String.LocalizationValue("time_decade \(quantity)")
-                break
+                return locale_name("time_decade \(quantity)")
             case .century:
-                key = String.LocalizationValue("time_century \(quantity)")
-                break
+                return locale_name("time_century \(quantity)")
             case .millennium:
-                key = String.LocalizationValue("time_millennium \(quantity)")
-                break
+                return locale_name("time_millennium \(quantity)")
             }
         }
-        return String(localized: key, table: "Units", bundle: Bundle.module)
     }
     
     func get_name(_ quantity: Float) -> String {
-        let key:String.LocalizationValue
         switch Self.category {
         case .acceleration:
             switch self as! AccelerationUnitType {
             case .metres_per_second_per_second:
-                key = String.LocalizationValue("acceleration_metres_per_second_per_second \(quantity)")
-                break
+                return locale_name("acceleration_metres_per_second_per_second \(quantity)")
             }
         case .action:
             switch self as! ActionUnitType {
             case .joule_second:
-                key = String.LocalizationValue("action_joule_second \(quantity)")
-                break
+                return locale_name("action_joule_second \(quantity)")
             }
         case .density:
             switch self as! DensityUnitType {
             case .kilogram_per_cubic_metre:
-                key = String.LocalizationValue("density_kilogram_per_cubic_metre \(quantity)")
-                break
+                return locale_name("density_kilogram_per_cubic_metre \(quantity)")
             case .gram_per_cubic_centimetre:
-                key = String.LocalizationValue("density_gram_per_cubic_centimetre \(quantity)")
-                break
+                return locale_name("density_gram_per_cubic_centimetre \(quantity)")
             }
         case .electric_charge:
             switch self as! ElectricChargeUnitType {
             case .coulomb:
-                key = String.LocalizationValue("electric_charge_coulomb \(quantity)")
-                break
+                return locale_name("electric_charge_coulomb \(quantity)")
             }
         case .energy:
             switch self as! EnergyUnitType {
             case .electronvolt:
-                key = String.LocalizationValue("energy_electronvolt \(quantity)")
-                break
+                return locale_name("energy_electronvolt \(quantity)")
             case .joule:
-                key = String.LocalizationValue("energy_joule \(quantity)")
-                break
+                return locale_name("energy_joule \(quantity)")
             }
         case .force:
             switch self as! ForceUnitType {
             case .newton:
-                key = String.LocalizationValue("force_newton \(quantity)")
-                break
+                return locale_name("force_newton \(quantity)")
             }
         case .frequency:
             switch self as! FrequencyUnitType {
             case .wavelength_in_metres:
-                key = String.LocalizationValue("frequency_wavelength_in_metres \(quantity)")
-                break
+                return locale_name("frequency_wavelength_in_metres \(quantity)")
             case .hertz:
-                key = String.LocalizationValue("frequency_hertz \(quantity)")
-                break
+                return locale_name("frequency_hertz \(quantity)")
             }
         case .length:
             switch self as! LengthUnitType {
             case .metre:
-                key = String.LocalizationValue("length_metre \(quantity)")
-                break
+                return locale_name("length_metre \(quantity)")
             case .nautical_mile:
-                key = String.LocalizationValue("length_nautical_mile \(quantity)")
-                break
+                return locale_name("length_nautical_mile \(quantity)")
             case .mile:
-                key = String.LocalizationValue("length_mile \(quantity)")
-                break
+                return locale_name("length_mile \(quantity)")
             case .furlong:
-                key = String.LocalizationValue("length_furlong \(quantity)")
-                break
+                return locale_name("length_furlong \(quantity)")
             case .yard:
-                key = String.LocalizationValue("length_yard \(quantity)")
-                break
+                return locale_name("length_yard \(quantity)")
             case .foot:
-                key = String.LocalizationValue("length_foot \(quantity)")
-                break
+                return locale_name("length_foot \(quantity)")
             case .inch:
-                key = String.LocalizationValue("length_inch \(quantity)")
-                break
+                return locale_name("length_inch \(quantity)")
             }
         case .mass:
             switch self as! MassUnitType {
             case .dalton:
-                key = String.LocalizationValue("mass_dalton \(quantity)")
-                break
+                return locale_name("mass_dalton \(quantity)")
             case .gram:
-                key = String.LocalizationValue("mass_gram \(quantity)")
-                break
+                return locale_name("mass_gram \(quantity)")
             case .ounce:
-                key = String.LocalizationValue("mass_ounce \(quantity)")
-                break
+                return locale_name("mass_ounce \(quantity)")
             case .pound:
-                key = String.LocalizationValue("mass_pound \(quantity)")
-                break
+                return locale_name("mass_pound \(quantity)")
             case .tonne:
-                key = String.LocalizationValue("mass_tonne \(quantity)")
-                break
+                return locale_name("mass_tonne \(quantity)")
             }
         case .pressure:
             switch self as! PressureUnitType {
             case .pascal:
-                key = String.LocalizationValue("pressure_pascal \(quantity)")
-                break
+                return locale_name("pressure_pascal \(quantity)")
             case .pound_per_square_inch:
-                key = String.LocalizationValue("pressure_pound_per_square_inch \(quantity)")
-                break
+                return locale_name("pressure_pound_per_square_inch \(quantity)")
             case .standard_atmosphere:
-                key = String.LocalizationValue("pressure_standard_atmosphere \(quantity)")
-                break
+                return locale_name("pressure_standard_atmosphere \(quantity)")
             }
         case .speed:
             switch self as! SpeedUnitType {
             case .metre_per_second:
-                key = String.LocalizationValue("speed_metre_per_second \(quantity)")
-                break
+                return locale_name("speed_metre_per_second \(quantity)")
             case .kilometre_per_hour:
-                key = String.LocalizationValue("speed_kilometre_per_hour \(quantity)")
-                break
+                return locale_name("speed_kilometre_per_hour \(quantity)")
             case .mile_per_hour:
-                key = String.LocalizationValue("speed_mile_per_hour \(quantity)")
-                break
+                return locale_name("speed_mile_per_hour \(quantity)")
             case .knot:
-                key = String.LocalizationValue("speed_knot \(quantity)")
-                break
+                return locale_name("speed_knot \(quantity)")
             case .foot_per_second:
-                key = String.LocalizationValue("speed_foot_per_second \(quantity)")
-                break
+                return locale_name("speed_foot_per_second \(quantity)")
             }
         case .temperature:
             switch self as! TemperatureUnitType {
             case .fahrenheit:
-                key = String.LocalizationValue("temperature_fahrenheit \(quantity)")
-                break
+                return locale_name("temperature_fahrenheit \(quantity)")
             case .celsius:
-                key = String.LocalizationValue("temperature_celsius \(quantity)")
-                break
+                return locale_name("temperature_celsius \(quantity)")
             case .kelvin:
-                key = String.LocalizationValue("temperature_kelvin \(quantity)")
-                break
+                return locale_name("temperature_kelvin \(quantity)")
             case .rankine:
-                key = String.LocalizationValue("temperature_rankine \(quantity)")
-                break
+                return locale_name("temperature_rankine \(quantity)")
             }
         case .time:
             switch self as! TimeUnitType {
             case .second:
-                key = String.LocalizationValue("time_second \(quantity)")
-                break
+                return locale_name("time_second \(quantity)")
             case .minute:
-                key = String.LocalizationValue("time_minute \(quantity)")
-                break
+                return locale_name("time_minute \(quantity)")
             case .hour:
-                key = String.LocalizationValue("time_hour \(quantity)")
-                break
+                return locale_name("time_hour \(quantity)")
             case .day:
-                key = String.LocalizationValue("time_day \(quantity)")
-                break
+                return locale_name("time_day \(quantity)")
             case .week:
-                key = String.LocalizationValue("time_week \(quantity)")
-                break
+                return locale_name("time_week \(quantity)")
             case .month:
-                key = String.LocalizationValue("time_month \(quantity)")
-                break
+                return locale_name("time_month \(quantity)")
             case .year:
-                key = String.LocalizationValue("time_year \(quantity)")
-                break
+                return locale_name("time_year \(quantity)")
             case .decade:
-                key = String.LocalizationValue("time_decade \(quantity)")
-                break
+                return locale_name("time_decade \(quantity)")
             case .century:
-                key = String.LocalizationValue("time_century \(quantity)")
-                break
+                return locale_name("time_century \(quantity)")
             case .millennium:
-                key = String.LocalizationValue("time_millennium \(quantity)")
-                break
+                return locale_name("time_millennium \(quantity)")
             }
         }
-        return String(localized: key, table: "Units", bundle: Bundle.module)
     }
     
     func get_name(_ quantity: Double) -> String {
-        let key:String.LocalizationValue
         switch Self.category {
         case .acceleration:
             switch self as! AccelerationUnitType {
             case .metres_per_second_per_second:
-                key = String.LocalizationValue("acceleration_metres_per_second_per_second \(quantity)")
-                break
+                return locale_name("acceleration_metres_per_second_per_second \(quantity)")
             }
         case .action:
             switch self as! ActionUnitType {
             case .joule_second:
-                key = String.LocalizationValue("action_joule_second \(quantity)")
-                break
+                return locale_name("action_joule_second \(quantity)")
             }
         case .density:
             switch self as! DensityUnitType {
             case .kilogram_per_cubic_metre:
-                key = String.LocalizationValue("density_kilogram_per_cubic_metre \(quantity)")
-                break
+                return locale_name("density_kilogram_per_cubic_metre \(quantity)")
             case .gram_per_cubic_centimetre:
-                key = String.LocalizationValue("density_gram_per_cubic_centimetre \(quantity)")
-                break
+                return locale_name("density_gram_per_cubic_centimetre \(quantity)")
             }
         case .electric_charge:
             switch self as! ElectricChargeUnitType {
             case .coulomb:
-                key = String.LocalizationValue("electric_charge_coulomb \(quantity)")
-                break
+                return locale_name("electric_charge_coulomb \(quantity)")
             }
         case .energy:
             switch self as! EnergyUnitType {
             case .electronvolt:
-                key = String.LocalizationValue("energy_electronvolt \(quantity)")
-                break
+                return locale_name("energy_electronvolt \(quantity)")
             case .joule:
-                key = String.LocalizationValue("energy_joule \(quantity)")
-                break
+                return locale_name("energy_joule \(quantity)")
             }
         case .force:
             switch self as! ForceUnitType {
             case .newton:
-                key = String.LocalizationValue("force_newton \(quantity)")
-                break
+                return locale_name("force_newton \(quantity)")
             }
         case .frequency:
             switch self as! FrequencyUnitType {
             case .wavelength_in_metres:
-                key = String.LocalizationValue("frequency_wavelength_in_metres \(quantity)")
-                break
+                return locale_name("frequency_wavelength_in_metres \(quantity)")
             case .hertz:
-                key = String.LocalizationValue("frequency_hertz \(quantity)")
-                break
+                return locale_name("frequency_hertz \(quantity)")
             }
         case .length:
             switch self as! LengthUnitType {
             case .metre:
-                key = String.LocalizationValue("length_metre \(quantity)")
-                break
+                return locale_name("length_metre \(quantity)")
             case .nautical_mile:
-                key = String.LocalizationValue("length_nautical_mile \(quantity)")
-                break
+                return locale_name("length_nautical_mile \(quantity)")
             case .mile:
-                key = String.LocalizationValue("length_mile \(quantity)")
-                break
+                return locale_name("length_mile \(quantity)")
             case .furlong:
-                key = String.LocalizationValue("length_furlong \(quantity)")
-                break
+                return locale_name("length_furlong \(quantity)")
             case .yard:
-                key = String.LocalizationValue("length_yard \(quantity)")
-                break
+                return locale_name("length_yard \(quantity)")
             case .foot:
-                key = String.LocalizationValue("length_foot \(quantity)")
-                break
+                return locale_name("length_foot \(quantity)")
             case .inch:
-                key = String.LocalizationValue("length_inch \(quantity)")
-                break
+                return locale_name("length_inch \(quantity)")
             }
         case .mass:
             switch self as! MassUnitType {
             case .dalton:
-                key = String.LocalizationValue("mass_dalton \(quantity)")
-                break
+                return locale_name("mass_dalton \(quantity)")
             case .gram:
-                key = String.LocalizationValue("mass_gram \(quantity)")
-                break
+                return locale_name("mass_gram \(quantity)")
             case .ounce:
-                key = String.LocalizationValue("mass_ounce \(quantity)")
-                break
+                return locale_name("mass_ounce \(quantity)")
             case .pound:
-                key = String.LocalizationValue("mass_pound \(quantity)")
-                break
+                return locale_name("mass_pound \(quantity)")
             case .tonne:
-                key = String.LocalizationValue("mass_tonne \(quantity)")
-                break
+                return locale_name("mass_tonne \(quantity)")
             }
         case .pressure:
             switch self as! PressureUnitType {
             case .pascal:
-                key = String.LocalizationValue("pressure_pascal \(quantity)")
-                break
+                return locale_name("pressure_pascal \(quantity)")
             case .pound_per_square_inch:
-                key = String.LocalizationValue("pressure_pound_per_square_inch \(quantity)")
-                break
+                return locale_name("pressure_pound_per_square_inch \(quantity)")
             case .standard_atmosphere:
-                key = String.LocalizationValue("pressure_standard_atmosphere \(quantity)")
-                break
+                return locale_name("pressure_standard_atmosphere \(quantity)")
             }
         case .speed:
             switch self as! SpeedUnitType {
             case .metre_per_second:
-                key = String.LocalizationValue("speed_metre_per_second \(quantity)")
-                break
+                return locale_name("speed_metre_per_second \(quantity)")
             case .kilometre_per_hour:
-                key = String.LocalizationValue("speed_kilometre_per_hour \(quantity)")
-                break
+                return locale_name("speed_kilometre_per_hour \(quantity)")
             case .mile_per_hour:
-                key = String.LocalizationValue("speed_mile_per_hour \(quantity)")
-                break
+                return locale_name("speed_mile_per_hour \(quantity)")
             case .knot:
-                key = String.LocalizationValue("speed_knot \(quantity)")
-                break
+                return locale_name("speed_knot \(quantity)")
             case .foot_per_second:
-                key = String.LocalizationValue("speed_foot_per_second \(quantity)")
-                break
+                return locale_name("speed_foot_per_second \(quantity)")
             }
         case .temperature:
             switch self as! TemperatureUnitType {
             case .fahrenheit:
-                key = String.LocalizationValue("temperature_fahrenheit \(quantity)")
-                break
+                return locale_name("temperature_fahrenheit \(quantity)")
             case .celsius:
-                key = String.LocalizationValue("temperature_celsius \(quantity)")
-                break
+                return locale_name("temperature_celsius \(quantity)")
             case .kelvin:
-                key = String.LocalizationValue("temperature_kelvin \(quantity)")
-                break
+                return locale_name("temperature_kelvin \(quantity)")
             case .rankine:
-                key = String.LocalizationValue("temperature_rankine \(quantity)")
-                break
+                return locale_name("temperature_rankine \(quantity)")
             }
         case .time:
             switch self as! TimeUnitType {
             case .second:
-                key = String.LocalizationValue("time_second \(quantity)")
-                break
+                return locale_name("time_second \(quantity)")
             case .minute:
-                key = String.LocalizationValue("time_minute \(quantity)")
-                break
+                return locale_name("time_minute \(quantity)")
             case .hour:
-                key = String.LocalizationValue("time_hour \(quantity)")
-                break
+                return locale_name("time_hour \(quantity)")
             case .day:
-                key = String.LocalizationValue("time_day \(quantity)")
-                break
+                return locale_name("time_day \(quantity)")
             case .week:
-                key = String.LocalizationValue("time_week \(quantity)")
-                break
+                return locale_name("time_week \(quantity)")
             case .month:
-                key = String.LocalizationValue("time_month \(quantity)")
-                break
+                return locale_name("time_month \(quantity)")
             case .year:
-                key = String.LocalizationValue("time_year \(quantity)")
-                break
+                return locale_name("time_year \(quantity)")
             case .decade:
-                key = String.LocalizationValue("time_decade \(quantity)")
-                break
+                return locale_name("time_decade \(quantity)")
             case .century:
-                key = String.LocalizationValue("time_century \(quantity)")
-                break
+                return locale_name("time_century \(quantity)")
             case .millennium:
-                key = String.LocalizationValue("time_millennium \(quantity)")
-                break
+                return locale_name("time_millennium \(quantity)")
             }
         }
-        return String(localized: key, table: "Units", bundle: Bundle.module)
     }
 }
