@@ -17,18 +17,18 @@ public enum TemperatureUnitType : String, UnitType {
     
     public var symbol : String {
         switch self {
-        case .kelvin: return "K"
         case .celsius: return "C"
         case .fahrenheit: return "F"
+        case .kelvin: return "K"
         case .rankine: return "R"
         }
     }
     
     public var absolute_zero : HugeFloat {
         switch self {
-        case .kelvin: return HugeFloat.zero
         case .celsius: return HugeFloat("-273.15")
         case .fahrenheit: return HugeFloat("-459.67")
+        case .kelvin: return HugeFloat.zero
         case .rankine: return HugeFloat.zero
         }
     }

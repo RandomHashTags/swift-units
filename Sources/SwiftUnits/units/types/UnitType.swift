@@ -31,7 +31,7 @@ extension String.LocalizationValue.StringInterpolation {
     }
     
     mutating func appendLiteral(_ value: HugeFloat) {
-        // TODO: fix (doesn't support any number larger than UInt64.max)
+        // TODO: fix (doesn't support any number larger than Double.max -> gets represented as an infinity symbol; only supports 6 decimal digits; can only be represented in base 2)
         let number:Float = value.represented_float
         appendInterpolation(number)
     }
@@ -52,6 +52,21 @@ public extension UnitType {
     func name(_ quantity: HugeFloat) -> String {
         let key:String.LocalizationValue
         switch Self.category {
+        case .energy:
+            switch self as! EnergyUnitType {
+            case .electronvolt:
+                key = String.LocalizationValue("energy_electronvolt \(quantity)")
+                break
+            case .joule:
+                key = String.LocalizationValue("energy_joule \(quantity)")
+                break
+            }
+        case .force:
+            switch self as! ForceUnitType {
+            case .newton:
+                key = String.LocalizationValue("force_newton \(quantity)")
+                break
+            }
         case .mass:
             switch self as! MassUnitType {
             case .dalton:
@@ -68,6 +83,21 @@ public extension UnitType {
                 break
             case .tonne:
                 key = String.LocalizationValue("mass_tonne \(quantity)")
+                break
+            }
+        case .temperature:
+            switch self as! TemperatureUnitType {
+            case .fahrenheit:
+                key = String.LocalizationValue("temperature_fahrenheit \(quantity)")
+                break
+            case .celsius:
+                key = String.LocalizationValue("temperature_celsius \(quantity)")
+                break
+            case .kelvin:
+                key = String.LocalizationValue("temperature_kelvin \(quantity)")
+                break
+            case .rankine:
+                key = String.LocalizationValue("temperature_rankine \(quantity)")
                 break
             }
         default:
