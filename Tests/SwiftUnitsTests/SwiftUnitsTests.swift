@@ -1,13 +1,12 @@
 import XCTest
 @testable import SwiftUnits
 import HugeNumbers
-import SwiftUI
 
 // https://www.calculateme.com
 final class SwiftUnitsTests: XCTestCase {
     func testExample() {
         test_conversions()
-        validate_localization()
+        LocalizationTests().validate()
     }
 }
 
@@ -64,35 +63,5 @@ extension SwiftUnitsTests {
         XCTAssert(kilogram_to_electronvolt == EnergyUnit(type: EnergyUnitType.electronvolt, value: HugeFloat("560958884538931987162813850074640384")))
         let electronvolt_to_mass:MassUnit = kilogram_to_electronvolt.to_mass()
         XCTAssert(electronvolt_to_mass == MassUnit(prefix: UnitPrefix.kilo, type: MassUnitType.gram, value: HugeFloat("1")), "test_conversion_mass_to_energy;joule_to_mass=\(electronvolt_to_mass)")
-    }
-}
-
-extension SwiftUnitsTests {
-    func validate_localization() {
-        var mass:MassUnit = MassUnit(type: MassUnitType.pound, value: "5")
-        var string:String = mass.description
-        XCTAssert(string.elementsEqual("5.000000 Pounds"), string)
-        
-        mass.value = HugeFloat("1")
-        string = mass.description
-        XCTAssert(string.elementsEqual("1.000000 Pound"), string)
-        
-        mass.type = .dalton
-        string = mass.description
-        XCTAssert(string.elementsEqual("1.000000 Dalton"), string)
-        
-        mass.type = .gram
-        mass.value = HugeFloat("2")
-        string = mass.description
-        XCTAssert(string.elementsEqual("2.000000 Grams"), string)
-        
-        string = mass.type.get_name(1)
-        XCTAssert(string.elementsEqual("1 Gram"), string)
-        
-        string = mass.type.get_name(Float(1.000000))
-        XCTAssert(string.elementsEqual("1.000000 Gram"), string)
-        
-        string = mass.type.get_name(Double(1.000000))
-        XCTAssert(string.elementsEqual("1.000000 Gram"), string)
     }
 }

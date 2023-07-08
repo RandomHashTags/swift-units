@@ -746,6 +746,17 @@
         }
       }
     },
+    "mass_dalton %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lf Dalton"
+          }
+        }
+      }
+    },
     "mass_dalton %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -849,6 +860,29 @@
         }
       }
     },
+    "mass_ounce %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Ounce"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Ounces"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "mass_ounce %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -895,6 +929,29 @@
         }
       }
     },
+    "mass_pound %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Pound"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Pounds"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "mass_pound %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -934,6 +991,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Tonnes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "mass_tonne %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Tonne"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Tonnes"
                 }
               }
             }

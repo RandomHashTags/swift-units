@@ -1,9 +1,6 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 
-internal class SwiftUnits {
-}
-
 public extension ExpressibleByIntegerLiteral {
     func to_unit<T: Unit>(prefix: UnitPrefix = UnitPrefix.normal, unit: T.TargetUnitType) -> T {
         return T.init(prefix: prefix, type: unit, value: "\(self)")
