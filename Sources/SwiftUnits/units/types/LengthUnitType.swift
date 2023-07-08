@@ -27,8 +27,8 @@ public enum LengthUnitType : String, UnitType {
         case .mile: return "mi"
         case .furlong: return "fur"
         case .yard: return "yd"
-        case .foot: return "ft"
-        case .inch: return "in"
+        case .foot: return "′"
+        case .inch: return "″"
         }
     }
 }

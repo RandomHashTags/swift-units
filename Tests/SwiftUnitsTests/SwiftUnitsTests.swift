@@ -85,5 +85,14 @@ extension SwiftUnitsTests {
         mass.value = HugeFloat("2")
         string = mass.description
         XCTAssert(string.elementsEqual("2.000000 Grams"), string)
+        
+        string = mass.type.get_name(1)
+        XCTAssert(string.elementsEqual("1 Gram"), string)
+        
+        string = mass.type.get_name(Float(1.000000))
+        XCTAssert(string.elementsEqual("1.000000 Gram"), string)
+        
+        string = mass.type.get_name(Double(1.000000))
+        XCTAssert(string.elementsEqual("1.000000 Gram"), string)
     }
 }
