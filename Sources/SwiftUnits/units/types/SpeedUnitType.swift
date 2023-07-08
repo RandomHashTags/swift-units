@@ -7,6 +7,8 @@
 import Foundation
 
 public enum SpeedUnitType : String, UnitType {
+    public static let category:UnitCategory = UnitCategory.speed
+    
     case metre_per_second
     case kilometre_per_hour
     case mile_per_hour

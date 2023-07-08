@@ -8,6 +8,8 @@
 import Foundation
 
 public enum TimeUnitType : String, UnitType {
+    public static let category:UnitCategory = UnitCategory.time
+    
     case second
     case minute
     case hour

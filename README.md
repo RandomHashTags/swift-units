@@ -3,11 +3,11 @@ Unit conversion Swift library, with other relevant information. Built on top of 
 
 ## Installation
 ### Requirements
-- Swift >= 5.3
-- macOS >= 10.15
-- iOS >= 13.0
-- tvOS >= 13.0
-- watchOS >= 6.0
+- Swift >= 5.7
+- macOS >= 13.0
+- iOS >= 16.0
+- tvOS >= 16.0
+- watchOS >= 9.0
 ### CocoaPods
 ```ruby
 pod 'SwiftUnits', '~> 1.0.0'

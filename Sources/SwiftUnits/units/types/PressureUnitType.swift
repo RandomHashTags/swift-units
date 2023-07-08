@@ -8,6 +8,8 @@
 import Foundation
 
 public enum PressureUnitType : String, UnitType {
+    public static let category:UnitCategory = UnitCategory.pressure
+    
     case pascal
     case pound_per_square_inch
     case standard_atmosphere

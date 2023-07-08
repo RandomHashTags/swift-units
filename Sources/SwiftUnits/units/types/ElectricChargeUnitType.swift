@@ -7,6 +7,8 @@
 import Foundation
 
 public enum ElectricChargeUnitType : String, UnitType {
+    public static let category:UnitCategory = UnitCategory.electric_charge
+    
     case coulomb
     
     public var symbol : String {

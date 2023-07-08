@@ -8,6 +8,8 @@
 import Foundation
 
 public enum LengthUnitType : String, UnitType {
+    public static let category:UnitCategory = UnitCategory.length
+    
     case metre
     
     case nautical_mile

@@ -7,6 +7,8 @@
 import Foundation
 
 public enum ActionUnitType : String, UnitType {
+    public static let category:UnitCategory = UnitCategory.action
+    
     case joule_second
     
     public var symbol : String {

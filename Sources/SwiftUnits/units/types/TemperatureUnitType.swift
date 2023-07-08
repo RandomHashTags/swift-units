@@ -8,6 +8,8 @@ import Foundation
 import HugeNumbers
 
 public enum TemperatureUnitType : String, UnitType {
+    public static let category:UnitCategory = UnitCategory.temperature
+    
     case fahrenheit
     case celsius
     case kelvin

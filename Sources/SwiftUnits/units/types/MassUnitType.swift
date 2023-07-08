@@ -7,6 +7,8 @@
 import Foundation
 
 public enum MassUnitType : String, UnitType {
+    public static let category:UnitCategory = UnitCategory.mass
+    
     case dalton
     case gram
     case ounce

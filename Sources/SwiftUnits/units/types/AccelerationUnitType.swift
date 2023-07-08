@@ -8,6 +8,8 @@
 import Foundation
 
 public enum AccelerationUnitType : String, UnitType {
+    public static let category:UnitCategory = UnitCategory.acceleration
+    
     case metres_per_second_per_second
     
     public var symbol : String {

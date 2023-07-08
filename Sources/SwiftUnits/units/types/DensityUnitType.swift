@@ -8,6 +8,8 @@
 import Foundation
 
 public enum DensityUnitType : String, UnitType {
+    public static let category:UnitCategory = UnitCategory.density
+    
     case kilogram_per_cubic_metre
     case gram_per_cubic_centimetre
     

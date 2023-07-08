@@ -7,6 +7,8 @@
 import Foundation
 
 public enum FrequencyUnitType : String, UnitType {
+    public static let category:UnitCategory = UnitCategory.frequency
+    
     case wavelength_in_metres
     
     case hertz

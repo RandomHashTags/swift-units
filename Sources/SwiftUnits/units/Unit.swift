@@ -47,7 +47,7 @@ public extension Unit {
     }
     
     var description : String {
-        return "\(value) " + symbol
+        return type.name(value)
     }
     
     mutating func convert_to_unit(_ unit: TargetUnitType) {

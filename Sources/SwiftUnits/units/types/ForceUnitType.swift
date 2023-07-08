@@ -8,6 +8,8 @@
 import Foundation
 
 public enum ForceUnitType : String, UnitType {
+    public static let category:UnitCategory = UnitCategory.force
+    
     case newton
     
     public var symbol : String {

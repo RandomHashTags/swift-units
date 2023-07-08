@@ -7,6 +7,8 @@
 import Foundation
 
 public enum EnergyUnitType : String, UnitType {
+    public static let category:UnitCategory = UnitCategory.energy
+    
     case electronvolt
     case joule
     
