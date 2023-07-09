@@ -24,6 +24,29 @@
         }
       }
     },
+    "acceleration_metres_per_second_per_second %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Metre per second squared"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Metres per second squared"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "acceleration_metres_per_second_per_second %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -63,6 +86,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Joule-seconds"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "action_joule_second %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Joule-second"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Joule-seconds"
                 }
               }
             }
@@ -116,6 +162,29 @@
         }
       }
     },
+    "density_gram_per_cubic_centimetre %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Gram per cubic centimetre"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Grams per cubic centimetre"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "density_gram_per_cubic_centimetre %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -162,6 +231,29 @@
         }
       }
     },
+    "density_kilogram_per_cubic_metre %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Kilogram per cubic metre"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Kilograms per cubic metre"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "density_kilogram_per_cubic_metre %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -201,6 +293,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Coulombs"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "electric_charge_coulomb %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Coulomb"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Coulombs"
                 }
               }
             }
@@ -346,6 +461,29 @@
         }
       }
     },
+    "force_newton %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Newton"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Newtons"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "force_newton %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -380,6 +518,17 @@
         }
       }
     },
+    "frequency_hertz %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lf Hertz"
+          }
+        }
+      }
+    },
     "frequency_hertz %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -398,6 +547,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%f Wavelength"
+          }
+        }
+      }
+    },
+    "frequency_wavelength_in_metres %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lf Wavelength"
           }
         }
       }
@@ -429,6 +589,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Feet"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "length_foot %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Foot"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Feet"
                 }
               }
             }
@@ -482,6 +665,29 @@
         }
       }
     },
+    "length_furlong %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Furlong"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Furlongs"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "length_furlong %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -521,6 +727,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Inches"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "length_inch %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Inch"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Inches"
                 }
               }
             }
@@ -574,6 +803,29 @@
         }
       }
     },
+    "length_metre %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Metre"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Metres"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "length_metre %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -613,6 +865,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Miles"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "length_mile %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Mile"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Miles"
                 }
               }
             }
@@ -666,6 +941,29 @@
         }
       }
     },
+    "length_nautical_mile %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Nautical Mile"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Nautical Miles"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "length_nautical_mile %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -705,6 +1003,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Yards"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "length_yard %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Yard"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Yards"
                 }
               }
             }
@@ -1067,6 +1388,29 @@
         }
       }
     },
+    "pressure_pascal %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Pascal"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Pascals"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "pressure_pascal %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1113,6 +1457,29 @@
         }
       }
     },
+    "pressure_pound_per_square_inch %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Pound per square inch"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Pounds per square inch"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "pressure_pound_per_square_inch %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1147,6 +1514,17 @@
         }
       }
     },
+    "pressure_standard_atmosphere %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lf Standard Atmosphere"
+          }
+        }
+      }
+    },
     "pressure_standard_atmosphere %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1174,6 +1552,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Feet per second"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "speed_foot_per_second %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Foot per second"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Feet per second"
                 }
               }
             }
@@ -1227,6 +1628,29 @@
         }
       }
     },
+    "speed_kilometre_per_hour %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Kilometre per hour"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Kilometres per hour"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "speed_kilometre_per_hour %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1236,7 +1660,7 @@
               "one" : {
                 "stringUnit" : {
                   "state" : "translated",
-                  "value" : "%lld Kilometer per hour"
+                  "value" : "%lld Kilometre per hour"
                 }
               },
               "other" : {
@@ -1266,6 +1690,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Knots"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "speed_knot %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Knot"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Knots"
                 }
               }
             }
@@ -1319,6 +1766,29 @@
         }
       }
     },
+    "speed_metre_per_second %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Metre per second"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Metres per second"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "speed_metre_per_second %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1365,6 +1835,29 @@
         }
       }
     },
+    "speed_mile_per_hour %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Mile per hour"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Miles per hour"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "speed_mile_per_hour %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1399,6 +1892,17 @@
         }
       }
     },
+    "temperature_celsius %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lf° Celsius"
+          }
+        }
+      }
+    },
     "temperature_celsius %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1421,6 +1925,17 @@
         }
       }
     },
+    "temperature_fahrenheit %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lf° Fahrenheit"
+          }
+        }
+      }
+    },
     "temperature_fahrenheit %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1438,7 +1953,18 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld Kelvin"
+            "value" : "%f Kelvin"
+          }
+        }
+      }
+    },
+    "temperature_kelvin %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lf Kelvin"
           }
         }
       }
@@ -1461,6 +1987,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%f° Rankine"
+          }
+        }
+      }
+    },
+    "temperature_rankine %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lf° Rankine"
           }
         }
       }
@@ -1492,6 +2029,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Centuries"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "time_century %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Century"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Centuries"
                 }
               }
             }
@@ -1545,6 +2105,29 @@
         }
       }
     },
+    "time_day %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Day"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Days"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "time_day %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1584,6 +2167,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Decades"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "time_decade %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Decade"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Decades"
                 }
               }
             }
@@ -1637,6 +2243,29 @@
         }
       }
     },
+    "time_hour %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Hour"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Hours"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "time_hour %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1676,6 +2305,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Millennia"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "time_millennium %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Millennium"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Millennia"
                 }
               }
             }
@@ -1729,6 +2381,29 @@
         }
       }
     },
+    "time_minute %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Minute"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Minutes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "time_minute %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1768,6 +2443,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Months"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "time_month %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Month"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Months"
                 }
               }
             }
@@ -1821,6 +2519,29 @@
         }
       }
     },
+    "time_second %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Second"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Seconds"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "time_second %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1867,6 +2588,29 @@
         }
       }
     },
+    "time_week %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Week"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Weeks"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "time_week %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1906,6 +2650,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Years"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "time_year %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Year"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Years"
                 }
               }
             }
