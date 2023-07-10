@@ -369,6 +369,29 @@
         }
       }
     },
+    "energy_electronvolt %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Electronvolt"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Electronvolts"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "energy_electronvolt %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -408,6 +431,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%f Joules"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "energy_joule %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Joule"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Joules"
                 }
               }
             }

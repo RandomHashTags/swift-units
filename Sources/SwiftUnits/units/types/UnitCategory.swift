@@ -21,4 +21,22 @@ public enum UnitCategory : String, CaseIterable {
     case speed
     case temperature
     case time
+    
+    var unit_type : any UnitType.Type {
+        switch self {
+        case .acceleration: return AccelerationUnitType.self
+        case .action: return ActionUnitType.self
+        case .density: return DensityUnitType.self
+        case .electric_charge: return ElectricChargeUnitType.self
+        case .energy: return EnergyUnitType.self
+        case .force: return ForceUnitType.self
+        case .frequency: return FrequencyUnitType.self
+        case .length: return LengthUnitType.self
+        case .mass: return MassUnitType.self
+        case .pressure: return PressureUnitType.self
+        case .speed: return SpeedUnitType.self
+        case .temperature: return TemperatureUnitType.self
+        case .time: return TimeUnitType.self
+        }
+    }
 }

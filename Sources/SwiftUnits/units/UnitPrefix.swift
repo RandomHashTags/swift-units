@@ -9,7 +9,7 @@ import HugeNumbers
 
 /// as defined at https://en.wikipedia.org/wiki/Metric_prefix
 /// `rawValue` == base ten multiplier (10^x)
-public enum UnitPrefix : Int {
+public enum UnitPrefix : Int, CaseIterable {
     case quecto = -30
     case ronto = -27
     case yocto = -24
