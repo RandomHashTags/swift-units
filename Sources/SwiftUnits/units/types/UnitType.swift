@@ -22,25 +22,7 @@ public protocol UnitType : Identifiable, CaseIterable, Hashable, RawRepresentabl
     func name(prefix: UnitPrefix, _ quantity: Double) -> String
 }
 
-extension String.LocalizationValue.StringInterpolation {
-    mutating func appendLiteral(_ value: HugeInt) {
-        // TODO: fix (doesn't support any number larger than UInt64.max)
-        let number:Int = value.to_int() ?? -1
-        appendInterpolation(number)
-    }
-    mutating func appendInterpolation(_ value: HugeInt) {
-        appendLiteral(value)
-    }
-    
-    mutating func appendLiteral(_ value: HugeFloat) {
-        // TODO: fix (doesn't support any number larger than Double.max -> gets represented as an infinity symbol; only supports 6 decimal digits; can only be represented in base 2)
-        let number:Float = value.represented_float
-        appendInterpolation(number)
-    }
-    mutating func appendInterpolation(_ value: HugeFloat) {
-        appendLiteral(value)
-    }
-    
+public extension String.LocalizationValue.StringInterpolation {
     mutating func appendInterpolation(_ value: UnitCategory) {
         appendLiteral(value.rawValue)
     }

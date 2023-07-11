@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "huge-numbers",
-        "repositoryURL": "https://github.com/RandomHashTags/swift_huge-numbers.git",
-        "state": {
-          "branch": null,
-          "revision": "03a2bb52c476605d6e328e89c756e8cb7b583a21",
-          "version": "1.0.15"
-        }
+  "pins" : [
+    {
+      "identity" : "swift_huge-numbers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RandomHashTags/swift_huge-numbers.git",
+      "state" : {
+        "revision" : "085e31230464b9385bdaf069ea037cc393c4cfd2",
+        "version" : "1.0.16"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }

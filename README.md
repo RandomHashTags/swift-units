@@ -10,15 +10,11 @@ Unit conversion Swift library, with other relevant information. Built on top of 
 - watchOS >= 9.0
 ### CocoaPods
 ```ruby
-pod 'SwiftUnits', '~> 1.0.0'
-```
-or for latest version (may not be uploaded to CocoaPods yet)
-```ruby
-pod 'SwiftUnits', :git => 'https://github.com/RandomHashTags/swift-units.git'
+pod 'SwiftUnits', '~> 1.1.2'
 ```
 ### Swift Package Manager
 ```swift
-.package(url: "https://github.com/RandomHashTags/swift-units.git", from: "1.0.0")
+.package(url: "https://github.com/RandomHashTags/swift-units.git", from: "1.1.2")
 ```
 
 ## Current features
