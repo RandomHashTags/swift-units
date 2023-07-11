@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'SwiftUnits'
-  s.version = '1.1.0'
+  s.version = '1.1.1'
   s.summary = 'Unit conversion Swift library, with other relevant information.'
   s.homepage = 'https://github.com/RandomHashTags/swift-units'
   s.license = { :type => 'CC0 1.0 Universal', :file => 'LICENSE.txt' }

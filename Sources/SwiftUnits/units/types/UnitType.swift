@@ -56,7 +56,7 @@ public extension UnitType {
     
     private func locale_name(prefix: UnitPrefix, _ key: String.LocalizationValue) -> String {
         let table_prefix:String = "\(prefix)"
-        return String(localized: key, table: "Units" + table_prefix.prefix(1).uppercased() + table_prefix.suffix(table_prefix.count-1), bundle: Bundle.module)
+        return String(localized: key, table: "Units" + table_prefix.prefix(1).uppercased() + table_prefix.suffix(table_prefix.count-1), bundle: Bundle.get_module())
     }
     
     func name(prefix: UnitPrefix, _ quantity: HugeInt) -> String {
