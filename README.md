@@ -8,13 +8,9 @@ Unit conversion Swift library, with other relevant information. Built on top of 
 - iOS >= 16.0
 - tvOS >= 16.0
 - watchOS >= 9.0
-### CocoaPods
-```ruby
-pod 'SwiftUnits', '~> 1.1.2'
-```
 ### Swift Package Manager
 ```swift
-.package(url: "https://github.com/RandomHashTags/swift-units.git", from: "1.1.2")
+.package(url: "https://github.com/RandomHashTags/swift-units.git", from: "1.1.3")
 ```
 
 ## Current features
