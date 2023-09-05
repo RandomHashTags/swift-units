@@ -20,6 +20,7 @@ Unit conversion Swift library, with other relevant information. Built on top of 
 - `DensityUnit`
 - `ElectricChargeUnit`
 - `EnergyUnit`
+- `EnergyPotentialUnit`
 - `ForceUnit`
 - `FrequencyUnit`
 - `LengthUnit`
