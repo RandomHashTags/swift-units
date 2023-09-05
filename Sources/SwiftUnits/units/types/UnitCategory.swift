@@ -12,6 +12,7 @@ public enum UnitCategory : String, CaseIterable {
     case action
     case density
     case electric_charge
+    case electric_potential
     case energy
     case force
     case frequency
@@ -28,6 +29,7 @@ public enum UnitCategory : String, CaseIterable {
         case .action: return ActionUnitType.self
         case .density: return DensityUnitType.self
         case .electric_charge: return ElectricChargeUnitType.self
+        case .electric_potential: return ElectricPotentialUnitType.self
         case .energy: return EnergyUnitType.self
         case .force: return ForceUnitType.self
         case .frequency: return FrequencyUnitType.self

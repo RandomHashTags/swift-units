@@ -5,19 +5,23 @@ import HugeNumbers
 // https://www.calculateme.com
 final class SwiftUnitsTests: XCTestCase {
     func testExample() {
-        test_conversions()
         LocalizationTests().validate()
     }
 }
 
 extension SwiftUnitsTests {
-    func test_conversions() {
-        test_conversion_density()
-        test_conversion_frequency()
-        test_conversion_mass()
-        test_conversion_temperature()
+    func test_conversion_electric_potential() {
+        var result:ElectricPotentialUnit = ElectricPotentialUnit(type: ElectricPotentialUnitType.volt, value: HugeFloat.one).to_unit(unit: ElectricPotentialUnitType.statvolt)
+        var expected_result:ElectricPotentialUnit = ElectricPotentialUnit(type: ElectricPotentialUnitType.statvolt, value: "0.0033356409519815")
+        XCTAssert(result == expected_result, "test_conversion_electric_potential;result=\(result);expected_result=\(expected_result)")
         
-        test_conversion_mass_to_energy()
+        result = expected_result.to_unit(unit: ElectricPotentialUnitType.abvolt)
+        expected_result = ElectricPotentialUnit(type: ElectricPotentialUnitType.abvolt, value: "100000000")
+        XCTAssert(result == expected_result, "test_conversion_electric_potential;result=\(result);expected_result=\(expected_result)")
+        
+        result = expected_result.to_unit(unit: ElectricPotentialUnitType.volt)
+        expected_result = ElectricPotentialUnit(type: ElectricPotentialUnit.TargetUnitType.volt, value: HugeFloat.one)
+        XCTAssert(result == expected_result, "test_conversion_electric_potential;result=\(result);expected_result=\(expected_result)")
     }
     func test_conversion_density() {
         var result:DensityUnit = DensityUnit(type: DensityUnitType.gram_per_cubic_centimetre, value: HugeFloat.one).to_unit(unit: DensityUnitType.kilogram_per_cubic_metre)
