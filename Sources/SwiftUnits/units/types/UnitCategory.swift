@@ -17,6 +17,7 @@ public enum UnitCategory : String, CaseIterable {
     case force
     case frequency
     case length
+    case magnetic_induction
     case mass
     case pressure
     case speed
@@ -34,6 +35,7 @@ public enum UnitCategory : String, CaseIterable {
         case .force: return ForceUnitType.self
         case .frequency: return FrequencyUnitType.self
         case .length: return LengthUnitType.self
+        case .magnetic_induction: return MagneticInductionUnitType.self
         case .mass: return MassUnitType.self
         case .pressure: return PressureUnitType.self
         case .speed: return SpeedUnitType.self
