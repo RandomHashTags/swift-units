@@ -38,7 +38,7 @@ public struct MassUnit : Unit {
             case .gram: return value
             case .ounce: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "1600000", divisor: "45359237"))
             case .pound: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "100000", divisor: "45359237"))
-            case .tonne: return value.multiply_decimal_by_ten(-6)
+            case .tonne: return value.move_decimal(-6)
             }
             
         case .ounce:
@@ -62,7 +62,7 @@ public struct MassUnit : Unit {
         case .tonne:
             switch unit {
             case .dalton: return value * HugeFloat("602217364335483200000000000000")
-            case .gram: return value.multiply_decimal_by_ten(6)
+            case .gram: return value.move_decimal(6)
             case .ounce: return value * HugeFloat(integer: HugeInt("35273"), remainder: HugeRemainder(dividend: "43633299", divisor: "45359237"))
             case .pound: return value * HugeFloat(integer: HugeInt("2204"), remainder: HugeRemainder(dividend: "28241652", divisor: "45359237"))
             case .tonne: return value

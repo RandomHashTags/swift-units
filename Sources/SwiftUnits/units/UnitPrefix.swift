@@ -72,6 +72,6 @@ public enum UnitPrefix : Int, CaseIterable {
     
     public func convert_to(_ prefix: UnitPrefix, value: HugeFloat) -> HugeFloat {
         guard self != prefix else { return value }
-        return value.multiply_decimal_by_ten(rawValue - prefix.rawValue)
+        return value.move_decimal(rawValue - prefix.rawValue)
     }
 }

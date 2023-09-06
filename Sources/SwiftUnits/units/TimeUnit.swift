@@ -117,9 +117,9 @@ public struct TimeUnit : Unit {
             case .week: return value * HugeFloat(integer: HugeInt("52"), remainder: HugeRemainder(dividend: "1", divisor: "8")) // TODO: fix
             case .month: return value * HugeFloat("12")
             case .year: return value
-            case .decade: return value.multiply_by_ten(-1)
-            case .century: return value.multiply_by_ten(-2)
-            case .millennium: return value.multiply_by_ten(-3)
+            case .decade: return value.move_decimal(-1)
+            case .century: return value.move_decimal(-2)
+            case .millennium: return value.move_decimal(-3)
             }
             
         case .decade:
@@ -130,10 +130,10 @@ public struct TimeUnit : Unit {
             case .day: return value * HugeFloat(integer: "3652", remainder: HugeRemainder(dividend: "1", divisor: "2"))
             case .week: return value * HugeFloat("520") // TODO: fix
             case .month: return value * HugeFloat("120") // TODO: fix
-            case .year: return value.multiply_by_ten(1)
+            case .year: return value.move_decimal(1)
             case .decade: return value
-            case .century: return value.multiply_by_ten(-1)
-            case .millennium: return value.multiply_by_ten(-2)
+            case .century: return value.move_decimal(-1)
+            case .millennium: return value.move_decimal(-2)
             }
             
         case .century:
@@ -144,10 +144,10 @@ public struct TimeUnit : Unit {
             case .day: return value * HugeFloat("36525")
             case .week: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "36525", divisor: "7"))
             case .month: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "36525", divisor: "30"))
-            case .year: return value.multiply_by_ten(2)
-            case .decade: return value.multiply_by_ten(1)
+            case .year: return value.move_decimal(2)
+            case .decade: return value.move_decimal(1)
             case .century: return value
-            case .millennium: return value.multiply_by_ten(-1)
+            case .millennium: return value.move_decimal(-1)
             }
             
         case .millennium:
@@ -158,9 +158,9 @@ public struct TimeUnit : Unit {
             case .day: return value * HugeFloat("365250")
             case .week: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "365250", divisor: "7"))
             case .month: return value * HugeFloat("12175")
-            case .year: return value.multiply_by_ten(3)
-            case .decade: return value.multiply_by_ten(2)
-            case .century: return value.multiply_by_ten(1)
+            case .year: return value.move_decimal(3)
+            case .decade: return value.move_decimal(2)
+            case .century: return value.move_decimal(1)
             case .millennium: return value
             }
         }

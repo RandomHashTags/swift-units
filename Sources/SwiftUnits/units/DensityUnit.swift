@@ -27,12 +27,12 @@ public struct DensityUnit : Unit {
         case .kilogram_per_cubic_metre:
             switch unit {
             case .kilogram_per_cubic_metre: return value
-            case .gram_per_cubic_centimetre: return value.multiply_decimal_by_ten(-3)
+            case .gram_per_cubic_centimetre: return value.move_decimal(-3)
             }
             
         case .gram_per_cubic_centimetre:
             switch unit {
-            case .kilogram_per_cubic_metre: return value.multiply_decimal_by_ten(3)
+            case .kilogram_per_cubic_metre: return value.move_decimal(3)
             case .gram_per_cubic_centimetre: return value
             }
             

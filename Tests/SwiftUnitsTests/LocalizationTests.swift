@@ -9,8 +9,8 @@ import XCTest
 @testable import SwiftUnits
 import HugeNumbers
 
-struct LocalizationTests {
-    func validate() {
+final class LocalizationTests : XCTestCase {
+    func test() {
         //write_unit_type_prefixes()
         
         for prefix in UnitPrefix.allCases {
@@ -20,8 +20,6 @@ struct LocalizationTests {
     
     private func write_unit_type_prefixes() {
         var prefixes:Set<UnitPrefix> = Set<UnitPrefix>(UnitPrefix.allCases)
-        prefixes.remove(UnitPrefix.zepto)
-        prefixes.remove(UnitPrefix.atto)
         prefixes.remove(UnitPrefix.normal)
         for prefix in prefixes {
             generate_prefix_localization(prefix: prefix)
@@ -169,6 +167,18 @@ extension LocalizationTests {
         
         validate_unit {
             return ElectricChargeUnit(prefix: prefix, type: ElectricChargeUnitType.coulomb, value: "1")
+        }
+        
+        validate_unit {
+            return ElectricPotentialUnit(prefix: prefix, type: ElectricPotentialUnitType.volt, value: "1")
+        } get_type_string: { type in
+            return type.rawValue.lowercased()
+        } get_plural_string: { type in
+            switch type {
+            case .abvolt: return "abvolts"
+            case .volt: return "volts"
+            case .statvolt: return "statvolts"
+            }
         }
         
         validate_unit {
