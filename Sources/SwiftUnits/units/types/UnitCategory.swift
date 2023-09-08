@@ -23,6 +23,7 @@ public enum UnitCategory : String, CaseIterable {
     case speed
     case temperature
     case time
+    case volume
     
     var unit_type : any UnitType.Type {
         switch self {
@@ -41,6 +42,7 @@ public enum UnitCategory : String, CaseIterable {
         case .speed: return SpeedUnitType.self
         case .temperature: return TemperatureUnitType.self
         case .time: return TimeUnitType.self
+        case .volume: return VolumeUnitType.self
         }
     }
 }
