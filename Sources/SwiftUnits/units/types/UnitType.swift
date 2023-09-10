@@ -60,22 +60,4 @@ public extension UnitType {
     func name(prefix: UnitPrefix, _ quantity: Double) -> String {
         return locale_name(prefix: prefix, "\(Self.category)_\(self) \(quantity)")
     }
-    
-    func is_less_than(_ unit: Self) -> Bool {
-        let elements:Self.AllCases = Self.allCases
-        return elements.firstIndex(of: self)! < elements.firstIndex(of: unit)!
-    }
-    func is_less_than_or_equal_to(_ unit: Self) -> Bool {
-        let elements:Self.AllCases = Self.allCases
-        return elements.firstIndex(of: self)! <= elements.firstIndex(of: unit)!
-    }
-    
-    func is_greater_than(_ unit: Self) -> Bool {
-        let elements:Self.AllCases = Self.allCases
-        return elements.firstIndex(of: self)! > elements.firstIndex(of: unit)!
-    }
-    func is_greater_than_or_equal_to(_ unit: Self) -> Bool {
-        let elements:Self.AllCases = Self.allCases
-        return elements.firstIndex(of: self)! >= elements.firstIndex(of: unit)!
-    }
 }

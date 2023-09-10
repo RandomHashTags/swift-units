@@ -3,6 +3,7 @@ import XCTest
 import HugeNumbers
 
 // https://www.calculateme.com
+// https://www.calculatorsoup.com
 final class SwiftUnitsTests: XCTestCase {
     func test_conversion_electric_potential() {
         var result:ElectricPotentialUnit = ElectricPotentialUnit(type: ElectricPotentialUnitType.volt, value: HugeFloat.one).to_unit(unit: ElectricPotentialUnitType.statvolt)

@@ -10,17 +10,21 @@ import Foundation
 public enum LengthUnitType : String, UnitType {
     public static let category:UnitCategory = UnitCategory.length
     
+    case angstrom
+    
+    case inch
+    case foot
+    case yard
+    case furlong
+    case mile
+    case nautical_mile
+    
     case metre
     
-    case nautical_mile
-    case mile
-    case furlong
-    case yard
-    case foot
-    case inch
     
     public var symbol : String {
         switch self {
+        case .angstrom: return "Å"
         case .metre: return "m"
             
         case .nautical_mile: return "nmi"
