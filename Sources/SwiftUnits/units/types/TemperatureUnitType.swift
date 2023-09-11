@@ -10,6 +10,7 @@ import HugeNumbers
 public enum TemperatureUnitType : String, UnitType {
     public static let category:UnitCategory = UnitCategory.temperature
     
+    case reaumer
     case fahrenheit
     case celsius
     case kelvin
@@ -17,6 +18,7 @@ public enum TemperatureUnitType : String, UnitType {
     
     public var symbol : String {
         switch self {
+        case .reaumer: return "Ré"
         case .celsius: return "C"
         case .fahrenheit: return "F"
         case .kelvin: return "K"
@@ -26,6 +28,7 @@ public enum TemperatureUnitType : String, UnitType {
     
     public var absolute_zero : HugeFloat {
         switch self {
+        case .reaumer: return HugeFloat("-218.52")
         case .celsius: return HugeFloat("-273.15")
         case .fahrenheit: return HugeFloat("-459.67")
         case .kelvin: return HugeFloat.zero
