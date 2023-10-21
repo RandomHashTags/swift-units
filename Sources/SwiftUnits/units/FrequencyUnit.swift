@@ -20,7 +20,7 @@ public struct FrequencyUnit : Unit {
         self.value = value
     }
     
-    public func convert_value_to_unit(_ unit: FrequencyUnitType) -> HugeFloat {
+    public func convert_value_to_unit(_ unit: TargetUnitType) -> HugeFloat {
         switch type {
             
         case .wavelength_in_metres:

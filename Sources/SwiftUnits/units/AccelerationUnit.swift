@@ -21,7 +21,7 @@ public struct AccelerationUnit : Unit {
         self.value = value
     }
     
-    public func convert_value_to_unit(_ unit: AccelerationUnitType) -> HugeFloat {
+    public func convert_value_to_unit(_ unit: TargetUnitType) -> HugeFloat {
         switch type {
             
         case .metres_per_second_per_second:

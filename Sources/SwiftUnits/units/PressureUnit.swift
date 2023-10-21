@@ -21,7 +21,7 @@ public struct PressureUnit : Unit {
         self.value = value
     }
     
-    public func convert_value_to_unit(_ unit: PressureUnitType) -> HugeFloat {
+    public func convert_value_to_unit(_ unit: TargetUnitType) -> HugeFloat {
         switch type {
             
         case .pascal:

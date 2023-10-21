@@ -21,7 +21,7 @@ public struct LengthUnit : Unit {
         self.value = value
     }
     
-    public func convert_value_to_unit(_ unit: LengthUnitType) -> HugeFloat {
+    public func convert_value_to_unit(_ unit: TargetUnitType) -> HugeFloat {
         switch type {
             
         case .angstrom:

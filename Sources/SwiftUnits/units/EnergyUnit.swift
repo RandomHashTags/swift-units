@@ -20,7 +20,7 @@ public struct EnergyUnit : Unit {
         self.value = value
     }
     
-    public func convert_value_to_unit(_ unit: EnergyUnitType) -> HugeFloat {
+    public func convert_value_to_unit(_ unit: TargetUnitType) -> HugeFloat {
         switch type {
             
         case .joule:

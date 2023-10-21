@@ -21,7 +21,7 @@ public struct DensityUnit : Unit {
         self.value = value
     }
     
-    public func convert_value_to_unit(_ unit: DensityUnitType) -> HugeFloat {
+    public func convert_value_to_unit(_ unit: TargetUnitType) -> HugeFloat {
         switch type {
             
         case .kilogram_per_cubic_metre:

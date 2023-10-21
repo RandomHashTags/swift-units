@@ -1,14 +1,15 @@
 //
-//  ActionUnit.swift
+//  ElectricResistanceUnit.swift
 //
-//  Created by Evan Anderson on 4/6/23.
+//
+//  Created by Evan Anderson on 10/21/23.
 //
 
 import Foundation
 import HugeNumbers
 
-public struct ActionUnit : Unit {
-    public typealias TargetUnitType = ActionUnitType
+public struct ElectricResistanceUnit : Unit {
+    public typealias TargetUnitType = ElectricResistanceUnitType
     
     public var prefix:UnitPrefix
     public var type:TargetUnitType
@@ -23,9 +24,9 @@ public struct ActionUnit : Unit {
     public func convert_value_to_unit(_ unit: TargetUnitType) -> HugeFloat {
         switch type {
             
-        case .joule_second:
+        case .ohm:
             switch unit {
-            case .joule_second: return value
+            case .ohm: return value
             }
             
         }
