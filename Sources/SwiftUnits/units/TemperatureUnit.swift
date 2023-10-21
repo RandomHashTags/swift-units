@@ -28,9 +28,9 @@ public struct TemperatureUnit : Unit {
             switch unit {
             case .reaumer: return value
             case .celsius: return value * HugeFloat("1.25")
-            case .fahrenheit: return (value * HugeFloat(integer: HugeInt("2"), remainder: HugeRemainder(dividend: "1", divisor: "4"))) + HugeFloat("32")
-            case .kelvin: return (value * HugeFloat(integer: HugeInt.one, remainder: HugeRemainder(dividend: "1", divisor: "4"))) + HugeFloat("273.15")
-            case .rankine: return (value * HugeFloat(integer: HugeInt("2"), remainder: HugeRemainder(dividend: "1", divisor: "4"))) + HugeFloat("491.67")
+            case .fahrenheit: return (value * HugeFloat("2.25")) + HugeFloat("32")
+            case .kelvin: return (value * HugeFloat("1.25")) + HugeFloat("273.15")
+            case .rankine: return (value * HugeFloat("2.25")) + HugeFloat("491.67")
             }
             
         case .celsius:
