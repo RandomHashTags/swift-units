@@ -14,6 +14,7 @@ public enum UnitCategory : String, CaseIterable {
     case electric_charge
     case electric_current
     case electric_potential
+    case electric_power
     case electric_resistance
     case energy
     case force
@@ -35,6 +36,7 @@ public enum UnitCategory : String, CaseIterable {
         case .electric_charge: return ElectricChargeUnitType.self
         case .electric_current: return ElectricCurrentUnitType.self
         case .electric_potential: return ElectricPotentialUnitType.self
+        case .electric_power: return ElectricPowerUnitType.self
         case .electric_resistance: return ElectricResistanceUnitType.self
         case .energy: return EnergyUnitType.self
         case .force: return ForceUnitType.self
