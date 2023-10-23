@@ -24,9 +24,9 @@ public struct TemperatureUnit : Unit {
     public func convert_value_to_unit(_ unit: TargetUnitType) -> HugeFloat {
         switch type {
             
-        case .reaumer:
+        case .reaumur:
             switch unit {
-            case .reaumer: return value
+            case .reaumur: return value
             case .celsius: return value * HugeFloat("1.25")
             case .fahrenheit: return (value * HugeFloat("2.25")) + HugeFloat("32")
             case .kelvin: return (value * HugeFloat("1.25")) + HugeFloat("273.15")
@@ -35,7 +35,7 @@ public struct TemperatureUnit : Unit {
             
         case .celsius:
             switch unit {
-            case .reaumer: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "4", divisor: "5"))
+            case .reaumur: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "4", divisor: "5"))
             case .celsius: return value
             case .fahrenheit: return (value * HugeFloat(integer: HugeInt("1"), remainder: HugeRemainder(dividend: "4", divisor: "5"))) + HugeFloat("32")
             case .kelvin: return value + HugeFloat(integer: HugeInt("273"), remainder: HugeRemainder(dividend: "15", divisor: "100"))
@@ -44,7 +44,7 @@ public struct TemperatureUnit : Unit {
             
         case .fahrenheit:
             switch unit {
-            case .reaumer: return (value - HugeFloat("32")) * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "4", divisor: "9"))
+            case .reaumur: return (value - HugeFloat("32")) * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "4", divisor: "9"))
             case .celsius: return (value - HugeFloat("32")) * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "5", divisor: "9"))
             case .fahrenheit: return value
             case .kelvin: return (value + HugeFloat(integer: HugeInt("459"), remainder: HugeRemainder(dividend: "67", divisor: "100"))) * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "5", divisor: "9"))
@@ -53,7 +53,7 @@ public struct TemperatureUnit : Unit {
             
         case .kelvin:
             switch unit {
-            case .reaumer: return (value - HugeFloat("273.15")) * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "4", divisor: "5"))
+            case .reaumur: return (value - HugeFloat("273.15")) * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "4", divisor: "5"))
             case .celsius: return value - HugeFloat(integer: HugeInt("273"), remainder: HugeRemainder(dividend: "15", divisor: "100"))
             case .fahrenheit: return (HugeFloat(integer: HugeInt("1"), remainder: HugeRemainder(dividend: "8", divisor: "10")) * value) - HugeFloat(integer: HugeInt("459"), remainder: HugeRemainder(dividend: "67", divisor: "100"))
             case .kelvin: return value
@@ -62,7 +62,7 @@ public struct TemperatureUnit : Unit {
             
         case .rankine:
             switch unit {
-            case .reaumer: return (value - HugeFloat("491.67")) * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "4", divisor: "9"))
+            case .reaumur: return (value - HugeFloat("491.67")) * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "4", divisor: "9"))
             case .celsius: return (value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "5", divisor: "9"))) - HugeFloat(integer: HugeInt("273"), remainder: HugeRemainder(dividend: "15", divisor: "100"))
             case .fahrenheit: return value - HugeFloat(integer: HugeInt("459"), remainder: HugeRemainder(dividend: "67", divisor: "100"))
             case .kelvin: return value * HugeFloat(integer: HugeInt.zero, remainder: HugeRemainder(dividend: "5", divisor: "9"))

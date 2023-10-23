@@ -40,7 +40,8 @@ extension LocalizationTests {
         let plus_one_offset_types:Set<String> = Set<String>([
             TemperatureUnitType.celsius,
             TemperatureUnitType.fahrenheit,
-            TemperatureUnitType.rankine
+            TemperatureUnitType.rankine,
+            TemperatureUnitType.reaumur
         ].map({ $0.rawValue }))
         
         var entries:[String:LocalizedKey] = [:]
@@ -170,15 +171,29 @@ extension LocalizationTests {
         }
         
         validate_unit {
+            return ElectricCurrentUnit(prefix: prefix, type: ElectricCurrentUnitType.ampere, value: "1")
+        }
+        
+        validate_unit {
             return ElectricPotentialUnit(prefix: prefix, type: ElectricPotentialUnitType.volt, value: "1")
-        } get_type_string: { type in
-            return type.rawValue.lowercased()
         } get_plural_string: { type in
             switch type {
             case .abvolt: return "abvolts"
             case .volt: return "volts"
             case .statvolt: return "statvolts"
             }
+        }
+        
+        validate_unit {
+            return ElectricPowerUnit(prefix: prefix, type: ElectricPowerUnitType.watt, value: "1")
+        }
+        
+        validate_unit {
+            return ElectricResistanceUnit(prefix: prefix, type: ElectricResistanceUnitType.ohm, value: "1")
+        }
+        
+        validate_unit {
+            return EnergyUnit(prefix: prefix, type: EnergyUnitType.electronvolt, value: "1")
         }
         
         validate_unit {
@@ -207,6 +222,12 @@ extension LocalizationTests {
             case .inch: return "inches"
             default: return nil
             }
+        }
+        
+        validate_unit {
+            return MagneticInductionUnit(prefix: prefix, type: MagneticInductionUnitType.gauss, value: "1")
+        } get_plural_string: { type in
+            return type == .gauss ? "gauss" : nil
         }
         
         validate_unit {
@@ -241,8 +262,10 @@ extension LocalizationTests {
         
         validate_unit {
             return TemperatureUnit(prefix: prefix, type: TemperatureUnitType.celsius, value: "1")
+        } get_type_string: { type in
+            return type == .reaumur ? "réaumur" : nil
         } get_plural_string: { type in
-            return type.rawValue
+            return type == .reaumur ? "réaumur" : type.rawValue
         } get_number_suffix: { type in
             return type == .kelvin ? "" : "°"
         }
@@ -256,6 +279,10 @@ extension LocalizationTests {
             default: return nil
             }
         }
+        
+        /*validate_unit {
+            return VolumeUnit(prefix: prefix, type: VolumeUnitType.barrel, value: "1")
+        }*/
     }
     private func validate_unit<U: SwiftUnits.Unit>(_ get_unit: () -> U, get_type_string: ((U.TargetUnitType) -> String?)? = nil, get_plural_string: ((U.TargetUnitType) -> String?)? = nil, get_number_suffix: ((U.TargetUnitType) -> String?)? = nil) {
         var unit:U = get_unit()
@@ -292,20 +319,25 @@ extension LocalizationTests {
                 plural_string = type_string + "s"
             }
             let number_suffix:String = (get_number_suffix?(type) ?? "").appending(" ")
-            XCTAssert(string.elementsEqual("5.000000" + number_suffix + plural_string), string + ";plural_string=" + plural_string + ";type_string=" + type_string)
+            var expected:String = "5.000000" + number_suffix + plural_string
+            XCTAssert(string.elementsEqual(expected), string + ";plural_string=" + plural_string + ";type_string=" + type_string + ";expected=" + expected)
             
             unit.value = HugeFloat.one
             string = unit.description
-            XCTAssert(string.elementsEqual("1.000000" + number_suffix + type_string), string + ";type_string=" + type_string)
+            expected = "1.000000" + number_suffix + type_string
+            XCTAssert(string.elementsEqual(expected), string + ";type_string=" + type_string + ";expected=" + expected)
             
             string = unit.type.name(prefix: unit.prefix, 1)
-            XCTAssert(string.elementsEqual("1" + number_suffix + type_string), string + ";type_string=" + type_string)
+            expected = "1" + number_suffix + type_string
+            XCTAssert(string.elementsEqual(expected), string + ";type_string=" + type_string + ";expected=" + expected)
             
             string = unit.type.name(prefix: unit.prefix, Float(1))
-            XCTAssert(string.elementsEqual("1.000000" + number_suffix + type_string), string + ";type_string=" + type_string)
+            expected = "1.000000" + number_suffix + type_string
+            XCTAssert(string.elementsEqual(expected), string + ";type_string=" + type_string + ";expected=" + expected)
             
             string = unit.type.name(prefix: unit.prefix, Double(9.25))
-            XCTAssert(string.elementsEqual("9.250000" + number_suffix + plural_string), string + ";plural_string=" + plural_string + ";type_string=" + type_string)
+            expected = "9.250000" + number_suffix + plural_string
+            XCTAssert(string.elementsEqual(expected), string + ";plural_string=" + plural_string + ";type_string=" + type_string + ";expected=" + expected)
         }
     }
 }

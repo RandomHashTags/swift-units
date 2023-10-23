@@ -7,7 +7,8 @@
 
 import Foundation
 
-public enum VolumeUnitType : String, UnitType {
+/*
+public enum VolumeUnitType : String, UnitType { // TODO: support
     public static let category:UnitCategory = UnitCategory.volume
     
     case cubic_centimetre
@@ -34,3 +35,4 @@ public enum VolumeUnitType : String, UnitType {
         }
     }
 }
+*/

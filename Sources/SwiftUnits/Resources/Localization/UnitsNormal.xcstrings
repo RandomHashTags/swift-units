@@ -346,6 +346,75 @@
         }
       }
     },
+    "electric_current_ampere %f" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%f Ampere"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%f Amperes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "electric_current_ampere %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Ampere"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Amperes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "electric_current_ampere %lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Ampere"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Amperes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "electric_potential_abvolt %f" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -546,6 +615,144 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%lld Volts"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "electric_power_watt %f" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%f Watt"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%f Watts"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "electric_power_watt %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Watt"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Watts"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "electric_power_watt %lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Watt"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Watts"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "electric_resistance_ohm %f" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%f Ohm"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%f Ohms"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "electric_resistance_ohm %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Ohm"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Ohms"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "electric_resistance_ohm %lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Ohm"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Ohms"
                 }
               }
             }
@@ -822,6 +1029,75 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld Wavelength"
+          }
+        }
+      }
+    },
+    "length_angstrom %f" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%f Angstrom"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%f Angstroms"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "length_angstrom %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Angstrom"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Angstroms"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "length_angstrom %lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Angstrom"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Angstroms"
+                }
+              }
+            }
           }
         }
       }
@@ -1302,6 +1578,108 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%lld Yards"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "magnetic_induction_gauss %f" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%f Gauss"
+          }
+        }
+      }
+    },
+    "magnetic_induction_gauss %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lf Gauss"
+          }
+        }
+      }
+    },
+    "magnetic_induction_gauss %lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Gauss"
+          }
+        }
+      }
+    },
+    "magnetic_induction_tesla %f" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%f Tesla"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%f Teslas"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "magnetic_induction_tesla %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Tesla"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Teslas"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "magnetic_induction_tesla %lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Tesla"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Teslas"
                 }
               }
             }
@@ -2262,6 +2640,39 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld° Rankine"
+          }
+        }
+      }
+    },
+    "temperature_reaumur %f" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%f° Réaumur"
+          }
+        }
+      }
+    },
+    "temperature_reaumur %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lf° Réaumur"
+          }
+        }
+      }
+    },
+    "temperature_reaumur %lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld° Réaumur"
           }
         }
       }
