@@ -10,7 +10,7 @@ Unit conversion Swift library, with other relevant information. Built on top of 
 - watchOS >= 9.0
 ### Swift Package Manager
 ```swift
-.package(url: "https://github.com/RandomHashTags/swift-units.git", from: "1.1.3")
+.package(url: "https://github.com/RandomHashTags/swift-units.git", from: "1.2.0")
 ```
 
 ## Current features
@@ -19,8 +19,11 @@ Unit conversion Swift library, with other relevant information. Built on top of 
 - `ActionUnit`
 - `DensityUnit`
 - `ElectricChargeUnit`
+- `ElectricCurrentUnit`
+- `ElectricPotentialUnit`
+- `ElectricPowerUnit`
+- `ElectricResistanceUnit`
 - `EnergyUnit`
-- `EnergyPotentialUnit`
 - `ForceUnit`
 - `FrequencyUnit`
 - `LengthUnit`
