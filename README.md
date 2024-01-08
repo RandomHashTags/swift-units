@@ -26,6 +26,7 @@ Unit conversion Swift library, with other relevant information. Built on top of 
 - `EnergyUnit`
 - `ForceUnit`
 - `FrequencyUnit`
+- `HeatCapacityUnit`
 - `LengthUnit`
 - `MassUnit`
 - `PressureUnit`

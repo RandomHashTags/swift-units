@@ -1033,6 +1033,75 @@
         }
       }
     },
+    "heat_capacity_joule_per_kelvin %f" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%f Joule per Kelvin"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%f Joules per Kelvin"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "heat_capacity_joule_per_kelvin %lf" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Joule per Kelvin"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lf Joules per Kelvin"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "heat_capacity_joule_per_kelvin %lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Joule per Kelvin"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Joules per Kelvin"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "length_angstrom %f" : {
       "extractionState" : "manual",
       "localizations" : {

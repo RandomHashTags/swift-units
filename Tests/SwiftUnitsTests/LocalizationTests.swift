@@ -11,11 +11,12 @@ import HugeNumbers
 
 final class LocalizationTests : XCTestCase {
     func test() {
-        //write_unit_type_prefixes()
-        
         for prefix in UnitPrefix.allCases {
             validate_unit_types(prefix: prefix)
         }
+        return;
+        
+        //write_unit_type_prefixes()
     }
     
     private func write_unit_type_prefixes() {
@@ -209,6 +210,18 @@ extension LocalizationTests {
         }
         
         validate_unit {
+            return HeatCapacityUnit(prefix: prefix, type: HeatCapacityUnitType.joule_per_kelvin, value: "1")
+        } get_type_string: { type in
+            switch type {
+            case .joule_per_kelvin: return "joule per Kelvin"
+            }
+        } get_plural_string: { type in
+            switch type {
+            case .joule_per_kelvin: return "joules per Kelvin"
+            }
+        }
+        
+        validate_unit {
             return LengthUnit(prefix: prefix, type: LengthUnitType.foot, value: "1")
         } get_type_string: { type in
             switch type {
@@ -320,24 +333,24 @@ extension LocalizationTests {
             }
             let number_suffix:String = (get_number_suffix?(type) ?? "").appending(" ")
             var expected:String = "5.000000" + number_suffix + plural_string
-            XCTAssert(string.elementsEqual(expected), string + ";plural_string=" + plural_string + ";type_string=" + type_string + ";expected=" + expected)
+            XCTAssertEqual(string, expected, "plural_string=" + plural_string + ";type_string=" + type_string)
             
             unit.value = HugeFloat.one
             string = unit.description
             expected = "1.000000" + number_suffix + type_string
-            XCTAssert(string.elementsEqual(expected), string + ";type_string=" + type_string + ";expected=" + expected)
+            XCTAssertEqual(string, expected, "type_string=" + type_string)
             
             string = unit.type.name(prefix: unit.prefix, 1)
             expected = "1" + number_suffix + type_string
-            XCTAssert(string.elementsEqual(expected), string + ";type_string=" + type_string + ";expected=" + expected)
+            XCTAssertEqual(string, expected, "type_string=" + type_string)
             
             string = unit.type.name(prefix: unit.prefix, Float(1))
             expected = "1.000000" + number_suffix + type_string
-            XCTAssert(string.elementsEqual(expected), string + ";type_string=" + type_string + ";expected=" + expected)
+            XCTAssertEqual(string, expected, "type_string=" + type_string)
             
             string = unit.type.name(prefix: unit.prefix, Double(9.25))
             expected = "9.250000" + number_suffix + plural_string
-            XCTAssert(string.elementsEqual(expected), string + ";plural_string=" + plural_string + ";type_string=" + type_string + ";expected=" + expected)
+            XCTAssertEqual(string, expected, "plural_string=" + plural_string + ";type_string=" + type_string)
         }
     }
 }
