@@ -274,6 +274,20 @@ extension LocalizationTests {
         }
         
         validate_unit {
+            return SubstanceUnit(prefix: prefix, type: SubstanceUnitType.mole, value: "1")
+        } get_type_string: { type in
+            switch type {
+            case .elementary_entities: return "elementary Entity"
+            case .mole: return nil
+            }
+        } get_plural_string: { type in
+            switch type {
+            case .elementary_entities: return "elementary Entities"
+            case .mole: return nil
+            }
+        }
+        
+        validate_unit {
             return TemperatureUnit(prefix: prefix, type: TemperatureUnitType.celsius, value: "1")
         } get_type_string: { type in
             return type == .reaumur ? "réaumur" : nil

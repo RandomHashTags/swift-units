@@ -25,6 +25,7 @@ public enum UnitCategory : String, CaseIterable {
     case mass
     case pressure
     case speed
+    case substance
     case temperature
     case time
     //case volume // TODO: support
@@ -48,6 +49,7 @@ public enum UnitCategory : String, CaseIterable {
         case .mass: return MassUnitType.self
         case .pressure: return PressureUnitType.self
         case .speed: return SpeedUnitType.self
+        case .substance: return SubstanceUnitType.self
         case .temperature: return TemperatureUnitType.self
         case .time: return TimeUnitType.self
         //case .volume: return VolumeUnitType.self
