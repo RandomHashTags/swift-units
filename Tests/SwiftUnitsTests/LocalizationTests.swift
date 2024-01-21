@@ -11,6 +11,9 @@ import HugeNumbers
 
 final class LocalizationTests : XCTestCase {
     func test() {
+        //validate_unit_types(prefix: UnitPrefix.normal)
+        //return;
+        
         for prefix in UnitPrefix.allCases {
             validate_unit_types(prefix: prefix)
         }
@@ -233,6 +236,21 @@ extension LocalizationTests {
             case .nautical_mile: return "nautical Miles"
             case .foot: return "feet"
             case .inch: return "inches"
+            default: return nil
+            }
+        }
+        
+        validate_unit {
+            return IlluminanceUnit(prefix: prefix, type: IlluminanceUnitType.lux, value: "1")
+        } get_type_string: { type in
+            switch type {
+            case .foot_candle: return "foot-Candle"
+            default: return nil
+            }
+        } get_plural_string: { type in
+            switch type {
+            case .lux: return "lux"
+            case .foot_candle: return "foot-Candles"
             default: return nil
             }
         }

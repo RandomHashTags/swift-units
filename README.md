@@ -27,12 +27,16 @@ Unit conversion Swift library, with other relevant information. Built on top of 
 - `ForceUnit`
 - `FrequencyUnit`
 - `HeatCapacityUnit`
+- `IlluminanceUnit`
 - `LengthUnit`
+- `MagneticInductionUnit`
 - `MassUnit`
 - `PressureUnit`
 - `SpeedUnit`
+- `SubstanceUnit`
 - `TemperatureUnit`
 - `TimeUnit`
+- `VolumeUnit`
 
 ## Contributing
 Adding/improving functionality is always welcome, just make a PR.
