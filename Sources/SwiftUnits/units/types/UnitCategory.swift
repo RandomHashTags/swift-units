@@ -10,6 +10,7 @@ import Foundation
 public enum UnitCategory : String, CaseIterable {
     case acceleration
     case action
+    case area
     case density
     case electric_charge
     case electric_current
@@ -22,6 +23,8 @@ public enum UnitCategory : String, CaseIterable {
     case heat_capacity
     case illuminance
     case length
+    case luminous_flux
+    case luminous_intensity
     case magnetic_induction
     case mass
     case pressure
@@ -35,6 +38,7 @@ public enum UnitCategory : String, CaseIterable {
         switch self {
         case .acceleration: return AccelerationUnitType.self
         case .action: return ActionUnitType.self
+        case .area: return AreaUnitType.self
         case .density: return DensityUnitType.self
         case .electric_charge: return ElectricChargeUnitType.self
         case .electric_current: return ElectricCurrentUnitType.self
@@ -47,6 +51,8 @@ public enum UnitCategory : String, CaseIterable {
         case .heat_capacity: return HeatCapacityUnitType.self
         case .illuminance: return IlluminanceUnitType.self
         case .length: return LengthUnitType.self
+        case .luminous_flux: return LuminousFluxUnitType.self
+        case .luminous_intensity: return LuminousIntensityUnitType.self
         case .magnetic_induction: return MagneticInductionUnitType.self
         case .mass: return MassUnitType.self
         case .pressure: return PressureUnitType.self

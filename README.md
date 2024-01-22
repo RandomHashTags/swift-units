@@ -15,28 +15,31 @@ Unit conversion Swift library, with other relevant information. Built on top of 
 
 ## Current features
 ### Units
-- `AccelerationUnit`
-- `ActionUnit`
-- `DensityUnit`
-- `ElectricChargeUnit`
-- `ElectricCurrentUnit`
-- `ElectricPotentialUnit`
-- `ElectricPowerUnit`
-- `ElectricResistanceUnit`
-- `EnergyUnit`
-- `ForceUnit`
-- `FrequencyUnit`
-- `HeatCapacityUnit`
-- `IlluminanceUnit`
-- `LengthUnit`
-- `MagneticInductionUnit`
-- `MassUnit`
-- `PressureUnit`
-- `SpeedUnit`
-- `SubstanceUnit`
-- `TemperatureUnit`
-- `TimeUnit`
-- `VolumeUnit`
+- Acceleration
+- Action
+- Area
+- Density
+- Electric Charge
+- Electric Current
+- Electric Potential
+- Electric Power
+- Electric Resistance
+- Energy
+- Force
+- Frequency
+- Heat Capacity
+- Illuminance
+- Length
+- Luminous Flux
+- Luminous Intensity
+- Magnetic Induction
+- Mass
+- Pressure
+- Speed
+- Substance
+- Temperature
+- Time
+- Volume
 
 ## Contributing
 Adding/improving functionality is always welcome, just make a PR.

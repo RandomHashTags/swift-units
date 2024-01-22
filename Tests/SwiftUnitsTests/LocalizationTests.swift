@@ -162,6 +162,24 @@ extension LocalizationTests {
         }
         
         validate_unit {
+            return AreaUnit(prefix: prefix, type: AreaUnitType.square_metre, value: "1")
+        } get_type_string: { type in
+            switch type {
+            case .square_metre: return "square Metre"
+            case .square_mile: return "square Mile"
+            case .square_yard: return "square Yard"
+            case .square_foot: return "square Foot"
+            case .square_inch: return "square Inch"
+            }
+        } get_plural_string: { type in
+            switch type {
+            case .square_foot: return "square Feet"
+            case .square_inch: return "square Inches"
+            default: return nil
+            }
+        }
+        
+        validate_unit {
             return DensityUnit(prefix: prefix, type: DensityUnitType.gram_per_cubic_centimetre, value: "1")
         } get_plural_string: { type in
             switch type {
@@ -225,6 +243,21 @@ extension LocalizationTests {
         }
         
         validate_unit {
+            return IlluminanceUnit(prefix: prefix, type: IlluminanceUnitType.lux, value: "1")
+        } get_type_string: { type in
+            switch type {
+            case .foot_candle: return "foot-Candle"
+            default: return nil
+            }
+        } get_plural_string: { type in
+            switch type {
+            case .lux: return "lux"
+            case .foot_candle: return "foot-Candles"
+            default: return nil
+            }
+        }
+        
+        validate_unit {
             return LengthUnit(prefix: prefix, type: LengthUnitType.foot, value: "1")
         } get_type_string: { type in
             switch type {
@@ -241,18 +274,11 @@ extension LocalizationTests {
         }
         
         validate_unit {
-            return IlluminanceUnit(prefix: prefix, type: IlluminanceUnitType.lux, value: "1")
-        } get_type_string: { type in
-            switch type {
-            case .foot_candle: return "foot-Candle"
-            default: return nil
-            }
-        } get_plural_string: { type in
-            switch type {
-            case .lux: return "lux"
-            case .foot_candle: return "foot-Candles"
-            default: return nil
-            }
+            return LuminousFluxUnit(prefix: prefix, type: LuminousFluxUnitType.lumen, value: "1")
+        }
+        
+        validate_unit {
+            return LuminousIntensityUnit(prefix: prefix, type: LuminousIntensityUnitType.candela, value: "1")
         }
         
         validate_unit {
